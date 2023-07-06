@@ -18,7 +18,9 @@
     "url": "https://github.com/KolBa228/cringe-team-top-project/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "handlebars": "^4.7.7",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
