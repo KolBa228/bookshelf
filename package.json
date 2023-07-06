@@ -1,21 +1,21 @@
 {
-  "name": "my_template",
+  "name": "cringe-team-top-project",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://vladrafeed.github.io/my_template",
+  "homepage": "https://KolBa228.github.io/cringe-team-top-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /my_template/"
+    "build": "parcel build src/*.html --public-url /cringe-team-top-project/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/my_template.git"
+    "url": "git+https://github.com/KolBa228/cringe-team-top-project.git"
   },
   "keywords": [],
-  "author": "Vladyslav Zhyr <jack22toplolkek@gmail.com>",
+  "author": "Mykola Bondariev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vladrafeed/my_template/issues"
+    "url": "https://github.com/KolBa228/cringe-team-top-project/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
