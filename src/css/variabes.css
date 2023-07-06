@@ -1,0 +1,9 @@
+:root {
+    --main-backgraund-color: #F3F3F3;
+    --main-white-color: #FFFFFF;
+    --main-black-color: #111111;
+    --secondary-black-color: #202024;
+    --blue-color: #4F2EE8;
+    --yellow-color: #EAC645;
+    --cubic: cubic-bezier(0.53, 0.36, 0.67, 1.07);
+}

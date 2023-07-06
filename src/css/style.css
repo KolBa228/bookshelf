@@ -1,0 +1,4 @@
+/* ПОДКЛЮЧАЕМ СТИЛИ ПО ПРИМЕРУ */
+@import url('./reset.css');
+@import url('./variabes.css');
+@import url('./basic_styels.css');
