@@ -1,3 +1,5 @@
 body {
     background-color: #B4AFAF;
+    font-family: DM Sans;
+    color: var(--main-black-color);
 }
