@@ -5,6 +5,11 @@ body {
 
 }
 
+.dark-theme {
+    background-color: var(--secondary-black-color);
+    color: #B4AFAF;
+}
+
 span {
     color: var(--blue-color);
 }
