@@ -1,41 +1,40 @@
 body {
-    background-color: #B4AFAF;
-    font-family: DM Sans;
-    color: var(--main-black-color);
-
+  background-color: var(--main-backgraund-color);
+  font-family: DM Sans;
+  color: var(--main-black-color);
 }
 
 .dark-theme {
-    background-color: var(--secondary-black-color);
-    color: #B4AFAF;
+  background-color: var(--secondary-black-color);
+  color: #b4afaf;
 }
 
 span {
-    color: var(--blue-color);
+  color: var(--blue-color);
 }
 
 .container {
-    max-width: 335px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 335px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 704px;
-        padding-left: 32px;
-        padding-right: 32px;
-        overflow: hidden;
-    }
+  .container {
+    max-width: 704px;
+    padding-left: 32px;
+    padding-right: 32px;
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .container {
-        max-width: 1392px;
-        padding-left: 24px;
-        padding-right: 24px;
-        overflow: visible;
-    }
+  .container {
+    max-width: 1392px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow: visible;
+  }
 }
