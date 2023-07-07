@@ -19,7 +19,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-
   <body>
     <load scr="./partials/header.html" />
     <main>
@@ -30,8 +29,17 @@
         <load scr="./partials/categories_list.html" />
         <load scr="./partials/sponsors.html" />
       </aside>
-      <load scr="./partials/best_sellers.html" />
+
+    <include src="./partials/header.html"></include>
+    <aside>
+      <include src="./partials/categories_list.html"></include>
+      <include src="./partials/sponsors.html"></include>
+    </aside>
+    <main>
+      <include src="./partials/best_sellers.html"></include>
     </main>
+    <!-- modal -->
+    <include src="./partials/pop_up.html"></include>
     <!-- JS -->
     <script src="index.js" type="module"></script>
   </body>

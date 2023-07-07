@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories</title>
+    <!-- NORMALAISE -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css"
+    />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <include src="./partials/header.html"></include>
+    <aside>
+      <include src="./partials/categories_list.html"></include>
+      <include src="./partials/sponsors.html"></include>
+    </aside>
+    <main>
+      <include src="../partials/category_section.html"></include>
+    </main>
+    <!-- modal -->
+    <include src="./partials/pop_up.html"></include>
+    <!-- JS -->
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
