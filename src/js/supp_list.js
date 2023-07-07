@@ -7,7 +7,7 @@ export const supportList = [
     },
     {
         title: 'Project HOPE',
-        url: 'https://www.projecthope.org/country/ukraine/',
+        url: 'https://i.ibb.co/JdtRHqp/sup2.png',
         img: 'https://i.ibb.co/YbBP3h8/sup2.png',
     },
     {

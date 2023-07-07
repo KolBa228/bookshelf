@@ -50,11 +50,7 @@
 
 /* ITEM */
 
-.support_item {
-    height: 32px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+
 
 /* TEST */
 
@@ -90,9 +86,10 @@
 .supp-btn:hover,
 .supp-btn:focus {
     background-color: var(--blue-color);
-    stroke: var(--main-white-color);
+    fill: var(--main-white-color);
     border: 2px solid rgba(79, 46, 232, 0.30);
 }
+
 
 @media screen and (min-width: 768px) {
     .supp-btn {
@@ -170,7 +167,35 @@
 
 /* LINK */
 
-.support_a {
+.support_item {
+    height: 32px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+.support_a img {
+    width: 130px;
+    padding-left: 10px;
+    position: absolute;
+    left: 10%;
+}
+
+.support_a {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    filter: brightness(0)invert();
+    transition: filter 0.3s var(--cubic);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.support_a:hover,
+.support_a:focus {
+    filter: none;
+ }
+
+.pos {
+    left: 10%;
 }
