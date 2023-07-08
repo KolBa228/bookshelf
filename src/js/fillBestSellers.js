@@ -31,17 +31,17 @@ const fillBestSellers = async () => {
   const hardcoverFiction = results[2];
   const hardcoverNonFiction = results[3];
 
-  combinedFiction.value.length = 4;
-  combinedNonFiction.value.length = 4;
-  hardcoverFiction.value.length = 4;
-  hardcoverNonFiction.value.length = 4;
+  combinedFiction.value.length = 5;
+  combinedNonFiction.value.length = 5;
+  hardcoverFiction.value.length = 5;
+  hardcoverNonFiction.value.length = 5;
 
-  console.log(results);
+  // console.log(results);
 
-  console.log(combinedFiction.value);
-  console.log(combinedNonFiction.value);
-  console.log(hardcoverFiction.value);
-  console.log(hardcoverNonFiction.value);
+  // console.log(combinedFiction.value);
+  // console.log(combinedNonFiction.value);
+  // console.log(hardcoverFiction.value);
+  // console.log(hardcoverNonFiction.value);
 
   bookslist1.innerHTML = bookCard(combinedFiction.value);
   bookslist2.innerHTML = bookCard(combinedNonFiction.value);
@@ -49,4 +49,11 @@ const fillBestSellers = async () => {
   bookslist4.innerHTML = bookCard(hardcoverNonFiction.value);
 };
 
-export default fillBestSellers;
+export { fillBestSellers, clearMarkup };
+
+function clearMarkup() {
+  bookslist1.innerHTML = '';
+  bookslist2.innerHTML = '';
+  bookslist3.innerHTML = '';
+  bookslist4.innerHTML = '';
+}

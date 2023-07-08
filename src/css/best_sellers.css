@@ -59,3 +59,9 @@
   line-height: 14px;
   letter-spacing: -0.48px;
 }
+
+.best-sellers-books-list-1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 996px;
+}
