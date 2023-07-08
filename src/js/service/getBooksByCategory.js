@@ -6,6 +6,7 @@ const getBooksByCategory = async category => {
     path: `${apiConfig.getBooksByCategory}?category=${category}`,
     method: 'GET',
   });
+  // console.log(response);
   return response;
 };
 

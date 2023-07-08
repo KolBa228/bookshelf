@@ -1,4 +1,4 @@
-import { fillBestSellers } from './fillBestSellers';
+import fillBestSellers from './fillBestSellers';
 
 fillBestSellers();
 

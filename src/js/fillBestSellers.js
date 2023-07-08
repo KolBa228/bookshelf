@@ -49,11 +49,4 @@ const fillBestSellers = async () => {
   bookslist4.innerHTML = bookCard(hardcoverNonFiction.value);
 };
 
-export { fillBestSellers, clearMarkup };
-
-function clearMarkup() {
-  bookslist1.innerHTML = '';
-  bookslist2.innerHTML = '';
-  bookslist3.innerHTML = '';
-  bookslist4.innerHTML = '';
-}
+export default fillBestSellers;
