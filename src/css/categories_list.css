@@ -1,21 +1,93 @@
-.container-categories-list{
+.container-categories{
     pointer-events: all;
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 228px;
+    width: 335px;
+    display: block;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 40px;
+    padding-left: 20px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .container-categories {
+        width: 356px;
+        margin-bottom: 86px;
+        margin-right: 40px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container-categories {
+        height: 472px;
+        width: 337px;
+        margin-bottom: 100px;
+        margin-right: 32px;
+    }
+  }
+
+  .container-categories::-webkit-scrollbar {
+    width: 8px;
+  }
+  .container-categories::-webkit-scrollbar-track {
+    background-color: var(--main-backgraund-color);
+  }
+  .container-categories::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+  }
+  .container-categories::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+
+.container-categories-list{
+   padding-right: 20px;
 }
 
 .categories-list{
+    width: 307px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 }
 
+@media screen and (min-width: 768px) {
+    .categories-list {
+        gap: 32px;
+        width: 318px;
+    }
+  }
+
 .categories-list-item{
+
 
 }
 
 .categories-button{
-    
+    display: flex;
+    background-color:transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height:1.125;
+    letter-spacing: -0.32px;
+}
+
+@media screen and (min-width: 768px) {
+    .categories-button {
+        font-size: 17px;
+        line-height: 1.333;
+        letter-spacing: -0.36px;
+    }
+  }
+
+.categories-button:hover, 
+.categories-button:focus{
+color: var(--blue-color);
+font-weight: 700;
 }
