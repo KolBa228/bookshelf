@@ -6,7 +6,7 @@ const getCategoryList = async () => {
     path: apiConfig.getCategoryList,
     method: 'GET',
   });
-  console.log(response);
+  // console.log(response);
   return response;
 };
 
