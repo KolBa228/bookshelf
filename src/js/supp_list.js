@@ -7,7 +7,7 @@ export const supportList = [
     },
     {
         title: 'Project HOPE',
-        url: 'https://i.ibb.co/JdtRHqp/sup2.png',
+        url: 'https://i.ibb.co/H24DqCP/sup2.png',
         img: 'https://i.ibb.co/JdtRHqp/sup2.png',
     },
     {
@@ -32,13 +32,18 @@ export const supportList = [
     },
     {
         title: 'World vision',
+        url: 'https://i.ibb.co/b5zgNMz/sup7.png',
+        img: 'https://i.ibb.co/b5zgNMz/sup7.png',
+    },
+    {
+        title: 'Serhiy Prytula Charity Foundation',
         url: 'https://i.ibb.co/Bs51z6p/sup8.png',
         img: 'https://i.ibb.co/Bs51z6p/sup8.png',
     },
     {
         title: 'Serhiy Prytula Charity Foundation',
-        url: 'https://i.ibb.co/tLVRLhJ/sup6.png',
-        img: 'https://i.ibb.co/tLVRLhJ/sup6.png',
+        url: 'https://i.ibb.co/gDs4nFt/sup9.png',
+        img: 'https://i.ibb.co/gDs4nFt/sup9.png',
     }];
 
     // {
