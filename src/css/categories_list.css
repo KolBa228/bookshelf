@@ -1,0 +1,13 @@
+.container-categories-list{
+    pointer-events: all;
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.categories-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}

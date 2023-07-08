@@ -36,12 +36,12 @@ const fillBestSellers = async () => {
   hardcoverFiction.value.length = 4;
   hardcoverNonFiction.value.length = 4;
 
-  console.log(results);
+  // console.log(results);
 
-  console.log(combinedFiction.value);
-  console.log(combinedNonFiction.value);
-  console.log(hardcoverFiction.value);
-  console.log(hardcoverNonFiction.value);
+  // console.log(combinedFiction.value);
+  // console.log(combinedNonFiction.value);
+  // console.log(hardcoverFiction.value);
+  // console.log(hardcoverNonFiction.value);
 
   bookslist1.innerHTML = bookCard(combinedFiction.value);
   bookslist2.innerHTML = bookCard(combinedNonFiction.value);
