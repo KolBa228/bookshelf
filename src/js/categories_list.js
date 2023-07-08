@@ -3,12 +3,19 @@ import getCategoryList from "./service/getCategoryList"
 const fillCategories = async() => {
     const categories = await getCategoryList()
 console.log(categories)
+const buttonHTML = [
+    `<li class="categories-list-item">
+      <button class="categories-button all-categories-button" type="button">
+      All categories
+      </button>
+    </li>`
+]
 const tempHTML = categories.map(category =>{
     return( `
-    <li class="categories_list_item">
-      <a class="categories_link" href="/categories?category=${category.list_name}">
+    <li class="categories-list-item">
+      <button class="categories-button" type="button">
       ${category.list_name}
-      </a>
+      </button>
     </li>`)
 })
 categoriesList.innerHTML = tempHTML.join(' ');
