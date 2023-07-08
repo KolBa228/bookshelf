@@ -1,12 +1,9 @@
 import getBooksByCategory from './service/getBooksByCategory';
 import bookCard from '../temlpates/bookCard.hbs';
-import clearTitles from './clearcategorytitles';
-import clearBestSellersMarkup from './clearbsmarkup';
 
 const request = 'Combined Print and E-Book Nonfiction';
 
 const categoryWrapper = document.querySelector('.selected-category-books-list');
-const testBtn = document.querySelector('.test-btn');
 const categoryTitle = document.querySelector('.category-title');
 
 const selectedCategoryMarkup = async () => {
@@ -24,4 +21,4 @@ const selectedCategoryMarkup = async () => {
   `;
 };
 
-testBtn.addEventListener('click', selectedCategoryMarkup);
+export default selectedCategoryMarkup;
