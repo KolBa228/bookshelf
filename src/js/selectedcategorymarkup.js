@@ -1,19 +1,17 @@
 import getBooksByCategory from './service/getBooksByCategory';
 import bookCard from '../temlpates/bookCard.hbs';
-import { bookslist1 } from './querrySelectors';
 import clearTitles from './clearcategorytitles';
 import clearBestSellersMarkup from './clearbsmarkup';
 
 const request = 'Combined Print and E-Book Nonfiction';
 
+const categoryWrapper = document.querySelector('.selected-category-books-list');
 const testBtn = document.querySelector('.test-btn');
-const categoryTitle = document.querySelector('.best-sellers-header');
+const categoryTitle = document.querySelector('.category-title');
 
 const selectedCategoryMarkup = async () => {
-  clearTitles();
-  clearBestSellersMarkup();
   const data = await getBooksByCategory(request);
-  bookslist1.innerHTML = bookCard(data);
+  categoryWrapper.innerHTML = bookCard(data);
   categoryTitle.textContent = request;
   const splitTitleFirst = categoryTitle.textContent
     .split(' ')
