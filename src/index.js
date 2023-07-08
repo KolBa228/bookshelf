@@ -1,5 +1,4 @@
-
-import getCategoryList from "./js/service/getCategoryList";
+import getCategoryList from './js/service/getCategoryList';
 
 const button = document.querySelector('.test');
 
@@ -11,3 +10,4 @@ suppMarkup();
 
 import './js/supp_swiper';
 
+import { createMarkup } from './js/popup/createMarkup';
