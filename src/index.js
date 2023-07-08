@@ -1,5 +1,3 @@
 import getCategoryList from "./js/service/getCategoryList";
+import './js/modal.js/modal'
 
-const button = document.querySelector('.test');
-
-button.addEventListener('click', () => getCategoryList());
