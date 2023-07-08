@@ -2,43 +2,43 @@ export const supportList = [
     {
         title: 'Save the Children',
         url:
-            'https://www.savethechildren.net/what-we-do/emergencies/ukraine-crisis',
-        img: 'https://i.ibb.co/cxMzYzb/sup1.png',
+            'https://i.ibb.co/ZKXN8rg/sup1.png',
+        img: 'https://i.ibb.co/ZKXN8rg/sup1.png',
     },
     {
         title: 'Project HOPE',
         url: 'https://i.ibb.co/JdtRHqp/sup2.png',
-        img: 'https://i.ibb.co/YbBP3h8/sup2.png',
+        img: 'https://i.ibb.co/JdtRHqp/sup2.png',
     },
     {
         title: 'UNITED24',
-        url: 'https://u24.gov.ua/uk',
-        img: 'https://i.ibb.co/zxj1zHh/sup3.png',
+        url: 'https://i.ibb.co/H4dVTTK/sup3.png',
+        img: 'https://i.ibb.co/H4dVTTK/sup3.png',
     },
     {
         title: 'International Medical Corps',
-        url: 'https://internationalmedicalcorps.org/country/ukraine/',
-        img: 'https://i.ibb.co/pvg6Mpb/sup4.png',
+        url: 'https://i.ibb.co/p4CWCH5/sup4.png',
+        img: 'https://i.ibb.co/p4CWCH5/sup4.png',
     },
     {
         title: 'Medicins Sans Frontieres',
-        url: 'https://www.msf.org/ukraine',
-        img: 'https://i.ibb.co/q0bR3jf/sup5.png',
+        url: 'https://i.ibb.co/CVJQ8Gz/sup5.png',
+        img: 'https://i.ibb.co/CVJQ8Gz/sup5.png',
     },
     {
         title: 'RAZOM',
-        url: 'https://www.razomforukraine.org/',
-        img: 'https://i.ibb.co/zPtm1qY/sup6.png',
+        url: 'https://i.ibb.co/tLVRLhJ/sup6.png',
+        img: 'https://i.ibb.co/tLVRLhJ/sup6.png',
     },
     {
         title: 'World vision',
-        url: 'https://www.wvi.org/emergencies/ukraine',
-        img: 'https://i.ibb.co/m92gHzJ/sup8.png',
+        url: 'https://i.ibb.co/Bs51z6p/sup8.png',
+        img: 'https://i.ibb.co/Bs51z6p/sup8.png',
     },
     {
         title: 'Serhiy Prytula Charity Foundation',
-        url: 'https://prytulafoundation.org/en',
-        img: 'https://i.ibb.co/2WZ54TH/sup9.png',
+        url: 'https://i.ibb.co/tLVRLhJ/sup6.png',
+        img: 'https://i.ibb.co/tLVRLhJ/sup6.png',
     }];
 
     // {
