@@ -11,3 +11,5 @@ suppMarkup();
 
 import './js/supp_swiper';
 
+import * as themeSwitching from './js/theme_switcher';
+themeSwitching();
