@@ -21,9 +21,13 @@
     "@parcel/watcher": "^2.2.0",
     "basiclightbox": "^5.0.4",
     "handlebars": "^4.7.7",
+    "install": "^0.13.0",
     "lightningcss": "^1.21.5",
     "modern-normalize": "^1.1.0",
+    "node-sass": "^9.0.0",
     "notiflix": "^3.2.6",
+    "npm": "^9.8.0",
+    "sass": "^1.63.6",
     "simplebar": "^6.2.5",
     "swiper": "^10.0.4"
   },
