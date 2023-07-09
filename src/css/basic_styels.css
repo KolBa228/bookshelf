@@ -75,6 +75,7 @@ span {
   .side-bar {
     flex-direction: column;
     justify-content: start;
+    margin-right: 40px;
   }
 }
 
