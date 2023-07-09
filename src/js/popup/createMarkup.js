@@ -1,7 +1,37 @@
 import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
+import bookCard from '../../temlpates/bookCard.hbs';
+
+const bookCard = bookCard();
+
+// const booksList = document.querySelectorAll('.best-sellers-books-list');
+// console.log(booksList);
+
+// booksList.forEach(el => {
+// is not array--- ul.map(listElement => {
+
+//   return listElement;
+// });
+// console.log(listElement);
+// });
+
+// booksList.forEach(el => {
+//   console.log(el);
+// });
+// -----------------------------
+const bookItem = document.querySelector('.best-sellers-books-list');
+const listItems = bookItem.children;
+// // приходить псевдомасив
+// console.log(listItems);
+// console.log(Array.from(listItems));
+// -------------------------------------------
 
 function createMarkup(product) {
+  const isImage = product.target.classList.contains('book-modal-img');
+  if (!isImage) return;
+
+  product.preventDefault();
+
   const instance = basicLightbox.create(
     `<div class="book-modal">
     <img src="${product.book_image}" alt="${product.title}" class="book-modal-img"/>
@@ -33,5 +63,23 @@ function createMarkup(product) {
   );
   instance.show();
 }
+
+// const listItems = bookItem.children;
+// приходить псевдомасив
+
+async function processListItems() {
+  for (const listItem of listItems) {
+    await processListItem(listItem);
+  }
+}
+
+async function processListItem(listItem) {
+  console.log(listItem);
+}
+
+processListItems();
+
+console.log(listItems);
+console.log(Array.from(listItems));
 
 export { createMarkup };
