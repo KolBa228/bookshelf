@@ -1,6 +1,5 @@
 import { categoriesList } from "./querrySelectors"
 import getCategoryList from "./service/getCategoryList"
-import SimpleBar from "simplebar"
 const fillCategories = async() => {
     const categories = await getCategoryList()
 console.log(categories)
@@ -19,7 +18,7 @@ const tempHTML = categories.map(category =>{
       </button>
     </li>`)
 })
-categoriesList.innerHTML = tempHTML.join(' ');
+categoriesList.innerHTML = buttonHTML.join(' ') + tempHTML.join(' ');
 }
 export default fillCategories
 
