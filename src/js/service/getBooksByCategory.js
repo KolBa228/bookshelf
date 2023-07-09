@@ -1,12 +1,13 @@
 import { apiConfig } from '../config';
 import { fetchData } from './fetchData';
 
-const getCategoryList = async category => {
+const getBooksByCategory = async category => {
   const response = await fetchData({
-    path: `${apiConfig.getTopBooks}?categoty=${category}`,
+    path: `${apiConfig.getBooksByCategory}?category=${category}`,
     method: 'GET',
   });
+  // console.log(response);
   return response;
 };
 
-export default getCategoryList;
+export default getBooksByCategory;
