@@ -1,5 +1,4 @@
-const button2 = document.getElementById("button");
-button2.addEventListener("click", scrollList);
+
 
 // function scrollList() {
 //     const spList = document.getElementById("support-list");
@@ -22,6 +21,9 @@ button2.addEventListener("click", scrollList);
 //         firstItem.classList.remove("hidden");
 //     }, 300);
 // }
+
+const button2 = document.getElementById("button");
+button2.addEventListener("click", scrollList);
 
 function scrollList() {
     const list = document.getElementById("support-list");
