@@ -12,7 +12,7 @@
     "url": "git+https://github.com/KolBa228/cringe-team-top-project.git"
   },
   "keywords": [],
-  "author": "Mykola Bondariev",
+  "author": "Mykola Bondariev B",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KolBa228/cringe-team-top-project/issues"
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "buffer": "^6.0.3",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "parcel-transformer-hbs": "^1.0.4",
