@@ -1,5 +1,5 @@
 body {
-  background-color: var(--main-backgraund-color);
+  background-color: var(--body-bg);
   font-family: DM Sans;
   color: var(--main-black-color);
 }

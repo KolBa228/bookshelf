@@ -12,4 +12,9 @@ const button = document.querySelector('.test');
 
 suppMarkup();
 
+import { createMarkup } from './js/popup/createMarkup';
+
+import * as themeSwitching from './js/theme_switcher';
+
 fillCategories()
+
