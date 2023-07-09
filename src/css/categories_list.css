@@ -28,7 +28,7 @@
     width: 8px;
   }
   .container-categories::-webkit-scrollbar-track {
-    background-color: var(--main-backgraund-color);
+    background-color: transparent;
   }
   .container-categories::-webkit-scrollbar-thumb {
     background-color: #888;
