@@ -1,3 +1,5 @@
+import './js/modal.js/modal'
+
 import getCategoryList from './js/service/getCategoryList';
 
 const button = document.querySelector('.test');
