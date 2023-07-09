@@ -10,4 +10,5 @@ suppMarkup();
 
 import './js/supp_swiper';
 
-import { createMarkup } from './js/popup/createMarkup';
+// import { createMarkup } from './js/popup/createMarkup';
+import { popUpMarkup } from './js/popup/popUpMarkup';
