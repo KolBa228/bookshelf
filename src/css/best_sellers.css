@@ -19,8 +19,6 @@
   }
 }
 
-.header-span {
-}
 .best-sellers-second-header {
   margin-bottom: 18px;
   color: #b4afaf;
@@ -33,19 +31,19 @@
 }
 
 .best-sellers-list-item {
-  width: 180;
+  min-width: 180px;
 }
+
 .book-cover-img {
 }
 
 .best-sellers-books-list {
   display: flex;
   gap: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .best-sellers-books-list img {
-  width: 100%;
   height: 256px;
   object-fit: cover;
   border-radius: 8px;
