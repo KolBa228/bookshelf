@@ -6,6 +6,8 @@ import {
   bookslist4,
 } from './querrySelectors';
 import bookCard from '../temlpates/bookCard.hbs';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 
 const fillBestSellers = async () => {
   const combinedFictionPromise = getBooksByCategory(
@@ -31,6 +33,7 @@ const fillBestSellers = async () => {
   const hardcoverFiction = results[2];
   const hardcoverNonFiction = results[3];
 
+
   combinedFiction.value.length = 5;
   combinedNonFiction.value.length = 5;
   hardcoverFiction.value.length = 5;
@@ -47,6 +50,97 @@ const fillBestSellers = async () => {
   bookslist2.innerHTML = bookCard(combinedNonFiction.value);
   bookslist3.innerHTML = bookCard(hardcoverFiction.value);
   bookslist4.innerHTML = bookCard(hardcoverNonFiction.value);
+
+  const firstSwiper = new Swiper('.swiper-1', {
+    modules: [Navigation],
+ 
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+
+      768: {
+        slidesPerView: 3,
+      },
+
+      1440: {
+        slidesPerView: 5,
+      },
+    },
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const secondSwiper = new Swiper('.swiper-2', {
+    modules: [Navigation],
+   
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+
+      768: {
+        slidesPerView: 3,
+      },
+
+      1440: {
+        slidesPerView: 5,
+      },
+    },
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const thirdSwiper = new Swiper('.swiper-3', {
+    modules: [Navigation],
+  
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+
+      768: {
+        slidesPerView: 3,
+      },
+
+      1440: {
+        slidesPerView: 5,
+      },
+    },
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  const fourthSwiper = new Swiper('.swiper-4', {
+    modules: [Navigation],
+
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
+      },
+
+      768: {
+        slidesPerView: 3,
+      },
+
+      1440: {
+        slidesPerView: 5,
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 };
 
 export default fillBestSellers;
