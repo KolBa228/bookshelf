@@ -7,7 +7,7 @@ const suppCases = document.querySelector('.support-list');
 
 export function suppMarkup() {
   let markup = '';
- let num = 0
+  let num = 0
 
     supportList.forEach(caseItem => {
       const { title: sTitle, url: sUrl, img: sImg } = caseItem;
