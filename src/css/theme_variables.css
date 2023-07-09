@@ -1,0 +1,95 @@
+:root[data-theme="light"] {
+      --backgraund-color: #F6F6F6;
+    --muted-text: #B4AFAF;
+    /* BODY */
+--body-bg:var(--backgraund-color);
+
+/* START */
+--start-form-bg-color: var(--backgraund-color);
+--start-form-borders-color: var(--main-black-color);
+--start-icons-and-btn-color: var(--main-black-color);
+--start-btn-text-color: #F3F3F3;
+
+/* HEADER */
+--header-bg-color: var(--main-white-color);
+--header-border-color: var(--main-black-color);
+--header-logo-color: #000000;
+--header-nav-and-icons: var(--main-black-color);
+
+/* HOME */
+/* CATEGORIES-LIST */
+--cat-list-text-color: var(--main-black-color);
+--cat-list-focus-color: var(--blue-color);
+
+/*  BEST SELLERS/HARDCOVER/ POP UP*/
+--cat-title: var(--main-black-color);
+--pre-title: var(--muted-text);
+
+--cat-btn-text: var(--main-black-color);
+
+--popup-bg: var(--main-white-color);
+--popup-border: var(--main-black-color);
+--popup-icons: var(--main-black-color);
+
+/* CARDS */
+--book-title: var(--main-black-color);
+--mute-autor: var(--muted-text);
+--book-description: var(--main-black-color);
+
+/* SHOPPING LIST */
+  --shopping-title: var(--main-black-color);
+--shopping-card-bg: var(--main-white-color);
+--btn-page-number-border: var(--main-black-color);
+--btn-page-bg:var(--main-white-color);
+--btn-active-bg:var(--main-black-color);
+--btn-active-number: var(--main-white-color);
+--empty-page-text: #000000;
+}
+
+:root[data-theme="dark"] {
+      --backgraund-color: #F6F6F6;
+    --muted-text: #B4AFAF;
+    /* BODY */
+--body-bg:var(--secondary-black-color);
+
+/* START */
+--start-form-bg-color: var(--secondary-black-color);
+--start-form-borders-color: var(--backgraund-color);
+--start-icons-and-btn-color: var(--backgraund-color);
+--start-btn-text-color: var(--secondary-black-color);
+
+/* HEADER */
+--header-bg-color: var(--main-black-color);
+--header-border-color: var(--main-white-color);
+--header-logo-color: #f3f3f3;
+--header-nav-and-icons: var(--main-white-color);
+
+/* HOME */
+/* CATEGORIES-LIST */
+--cat-list-text-color: var(--main-white-color);
+--cat-list-focus-color: var(--yellow-color);
+
+/*  BEST SELLERS/HARDCOVER/ POP UP*/
+--cat-title: var(--main-white-color);
+--pre-title: var(--muted-text);
+
+--cat-btn-text: var(--main-white-color);
+
+--popup-bg: var(--secondary-black-color);
+--popup-border: var(--main-white-color);
+--popup-icons: var(--main-white-color);
+
+/* CARDS */
+--book-title: var(--main-white-color);
+--mute-autor: var(--muted-text);
+--book-description: var(--main-white-color);
+
+/* SHOPPING LIST */
+  --shopping-title: var(--main-white-color);
+--shopping-card-bg: var(--main-black-color);
+--btn-page-number-border: var(--main-white-color);
+--btn-page-bg:var(--secondary-black-color);
+--btn-active-bg:var(--main-white-color);
+--btn-active-number: #000000;
+--empty-page-text: var(--main-white-color);
+}

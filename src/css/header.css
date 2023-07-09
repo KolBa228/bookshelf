@@ -3,8 +3,8 @@ ul {
 }
 
 .header-container {
-  background-color: var(--main-backgraund-color);
-  border: 1.5px solid var(--main-black-color);
+  background-color: var(--header-bg-color);
+  border: 1.5px solid var(--header-border-color);
   border-radius: 0px 0px 8px 8px;
   display: flex;
   justify-content: space-between;
@@ -30,6 +30,7 @@ ul {
 .header-item {
   line-height: 14px;
   font-weight: 600;
+  color: var(--header-logo-color);
 }
 
 .header-logo-item {
@@ -58,10 +59,13 @@ ul {
   align-items: flex-start;
   gap: 10px;
   border-radius: 36px;
+  color: var(--header-nav-and-icons);
+  fill: var(--header-nav-and-icons);
 }
 .active {
   background-color: var(--yellow-color);
   font-weight: 700;
+  color: var(--main-black-color);
 }
 
 .header-nav-link {
