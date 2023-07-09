@@ -8,6 +8,7 @@ import {
 import bookCard from '../temlpates/bookCard.hbs';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import { map } from 'lodash';
 
 const fillBestSellers = async () => {
   const combinedFictionPromise = getBooksByCategory(
@@ -50,20 +51,25 @@ const fillBestSellers = async () => {
   bookslist3.innerHTML = bookCard(hardcoverFiction.value);
   bookslist4.innerHTML = bookCard(hardcoverNonFiction.value);
 
-  const firstSwiper = new Swiper('.swiper-1', {
+  const swiperSettings = {
     modules: [Navigation],
 
     breakpoints: {
       375: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
       },
 
       768: {
+        spaceBetween: 25,
         slidesPerView: 3,
+        slidesPerGroup: 1,
       },
 
       1440: {
+        spaceBetween: 24,
         slidesPerView: 5,
+        slidesPerGroup: 1,
       },
     },
     loop: true,
@@ -71,75 +77,15 @@ const fillBestSellers = async () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  });
+  };
 
-  const secondSwiper = new Swiper('.swiper-2', {
-    modules: [Navigation],
+  const firstSwiper = new Swiper('.swiper-1', swiperSettings);
 
-    breakpoints: {
-      375: {
-        slidesPerView: 1,
-      },
+  const secondSwiper = new Swiper('.swiper-2', swiperSettings);
 
-      768: {
-        slidesPerView: 3,
-      },
+  const thirdSwiper = new Swiper('.swiper-3', swiperSettings);
 
-      1440: {
-        slidesPerView: 5,
-      },
-    },
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
-  const thirdSwiper = new Swiper('.swiper-3', {
-    modules: [Navigation],
-
-    breakpoints: {
-      375: {
-        slidesPerView: 1,
-      },
-
-      768: {
-        slidesPerView: 3,
-      },
-
-      1440: {
-        slidesPerView: 5,
-      },
-    },
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-
-  const fourthSwiper = new Swiper('.swiper-4', {
-    modules: [Navigation],
-
-    breakpoints: {
-      375: {
-        slidesPerView: 1,
-      },
-
-      768: {
-        slidesPerView: 3,
-      },
-
-      1440: {
-        slidesPerView: 5,
-      },
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  const fourthSwiper = new Swiper('.swiper-4', swiperSettings);
 };
 
 export default fillBestSellers;

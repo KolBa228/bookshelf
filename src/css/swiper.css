@@ -3,7 +3,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 775px) {
+@media screen and (min-width: 768px) {
   .swiper {
     width: 704px;
     overflow: hidden;
@@ -28,7 +28,7 @@
   margin-bottom: 40px;
 }
 
-@media screen and (min-width: 775px) {
+@media screen and (min-width: 768px) {
   .button-box {
     width: 704px;
     justify-content: flex-end;
@@ -92,4 +92,14 @@
   width: 40px;
   height: 40px;
   opacity: 0.3;
+}
+
+.button-box {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .button-box {
+    display: flex;
+  }
 }
