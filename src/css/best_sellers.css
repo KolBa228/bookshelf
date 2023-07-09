@@ -34,12 +34,37 @@
   min-width: 180px;
 }
 
+@media screen and (min-width: 768px) {
+  .best-sellers-list-item {
+    width: 218px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .best-sellers-list-item {
+    width: 180px;
+  }
+}
+
 .book-cover-img {
+  width: 335px;
+}
+
+@media screen and (min-width: 768px) {
+  .book-cover-img {
+    width: 218px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .book-cover-img {
+    width: 180px;
+  }
 }
 
 .best-sellers-books-list {
   display: flex;
-  gap: 24px;
+  /* gap: 24px; */
   margin-bottom: 32px;
 }
 

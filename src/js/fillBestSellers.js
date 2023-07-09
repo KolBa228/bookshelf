@@ -53,17 +53,23 @@ const fillBestSellers = async () => {
   const firstSwiper = new Swiper('.swiper-1', {
     modules: [Navigation],
 
+
     breakpoints: {
       375: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
       },
 
       768: {
+        spaceBetween: 25,
         slidesPerView: 3,
+        slidesPerGroup: 3,
       },
 
       1440: {
+        spaceBetween: 24,
         slidesPerView: 5,
+        slidesPerGroup: 3,
       },
     },
     loop: true,
@@ -79,14 +85,19 @@ const fillBestSellers = async () => {
     breakpoints: {
       375: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
       },
 
       768: {
+        spaceBetween: 25,
         slidesPerView: 3,
+        slidesPerGroup: 3,
       },
 
       1440: {
+        spaceBetween: 24,
         slidesPerView: 5,
+        slidesPerGroup: 3,
       },
     },
     loop: true,
@@ -98,18 +109,24 @@ const fillBestSellers = async () => {
 
   const thirdSwiper = new Swiper('.swiper-3', {
     modules: [Navigation],
+    
 
     breakpoints: {
       375: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
       },
 
       768: {
+        spaceBetween: 25,
         slidesPerView: 3,
+        slidesPerGroup: 3,
       },
 
       1440: {
+        spaceBetween: 24,
         slidesPerView: 5,
+        slidesPerGroup: 3,
       },
     },
     loop: true,
@@ -122,19 +139,26 @@ const fillBestSellers = async () => {
   const fourthSwiper = new Swiper('.swiper-4', {
     modules: [Navigation],
 
+
     breakpoints: {
       375: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
       },
 
       768: {
+        spaceBetween: 25,
         slidesPerView: 3,
+        slidesPerGroup: 3,
       },
 
       1440: {
+        spaceBetween: 24,
         slidesPerView: 5,
+        slidesPerGroup: 3,
       },
     },
+    loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
