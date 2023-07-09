@@ -1,23 +1,20 @@
 .swiper {
   width: 335px;
-  height: 100%;
   overflow: hidden;
 }
 
 @media screen and (min-width: 775px) {
-.swiper {
-  width: 704px;
-  height: 100%;
-  overflow: hidden;
-}
+  .swiper {
+    width: 704px;
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-.swiper {
-  width: 996px;
-  height: 100%;
-  overflow: hidden;
-}
+  .swiper {
+    width: 996px;
+    overflow: hidden;
+  }
 }
 
 /* .button-box {
@@ -27,7 +24,7 @@
 .button-box {
   width: 335px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 
@@ -81,8 +78,6 @@
   opacity: 1;
   transition: color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07),
     background-color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07);
-   
-
 }
 
 .next-icon {
@@ -90,7 +85,6 @@
   width: 40px;
   height: 40px;
   opacity: 0.3;
-  
 }
 
 .prev-icon {
@@ -99,7 +93,3 @@
   height: 40px;
   opacity: 0.3;
 }
-
-
-
-
