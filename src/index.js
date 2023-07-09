@@ -1,4 +1,4 @@
-import './js/modal.js/modal'
+import './js/modal.js/modal';
 
 import getCategoryList from './js/service/getCategoryList';
 
