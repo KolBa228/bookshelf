@@ -71,6 +71,7 @@
     font-size: 14px;
     line-height:1.125;
     letter-spacing: -0.32px;
+    color: var(--cat-list-text-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -82,7 +83,7 @@
 
 .categories-button:hover, 
 .categories-button:focus{
-color: var(--blue-color);
+color: var(--cat-list-focus-color);
 font-weight: 700;
 text-transform: uppercase;
 }
