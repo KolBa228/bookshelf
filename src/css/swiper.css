@@ -93,3 +93,13 @@
   height: 40px;
   opacity: 0.3;
 }
+
+.button-box {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .button-box {
+    display: flex;
+  }
+}
