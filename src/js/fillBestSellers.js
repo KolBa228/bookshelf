@@ -33,11 +33,10 @@ const fillBestSellers = async () => {
   const hardcoverFiction = results[2];
   const hardcoverNonFiction = results[3];
 
-
-  combinedFiction.value.length = 5;
-  combinedNonFiction.value.length = 5;
-  hardcoverFiction.value.length = 5;
-  hardcoverNonFiction.value.length = 5;
+  // combinedFiction.value.length = 4;
+  // combinedNonFiction.value.length = 4;
+  // hardcoverFiction.value.length = 4;
+  // hardcoverNonFiction.value.length = 4;
 
   // console.log(results);
 
@@ -53,7 +52,7 @@ const fillBestSellers = async () => {
 
   const firstSwiper = new Swiper('.swiper-1', {
     modules: [Navigation],
- 
+
     breakpoints: {
       375: {
         slidesPerView: 1,
@@ -76,7 +75,7 @@ const fillBestSellers = async () => {
 
   const secondSwiper = new Swiper('.swiper-2', {
     modules: [Navigation],
-   
+
     breakpoints: {
       375: {
         slidesPerView: 1,
@@ -99,7 +98,7 @@ const fillBestSellers = async () => {
 
   const thirdSwiper = new Swiper('.swiper-3', {
     modules: [Navigation],
-  
+
     breakpoints: {
       375: {
         slidesPerView: 1,
