@@ -2,7 +2,12 @@ ul {
   list-style: none;
 }
 
+.header {
+  background-color: var(--main-white-color);
+}
+
 .header-container {
+
   background-color: var(--header-bg-color);
   border: 1.5px solid var(--header-border-color);
   border-radius: 0px 0px 8px 8px;

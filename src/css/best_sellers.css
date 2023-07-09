@@ -1,10 +1,24 @@
 .best-sellers-header {
+  margin-top: 40px;
   color: #111;
   font-size: 48px;
   line-height: 52px;
   letter-spacing: -1.92px;
   margin-bottom: 40px;
 }
+
+@media screen and (min-width: 768px) {
+  .best-sellers-header {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .best-sellers-header {
+    margin-top: 40px;
+  }
+}
+
 .header-span {
 }
 .best-sellers-second-header {
