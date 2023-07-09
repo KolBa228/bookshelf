@@ -3,8 +3,8 @@ ul {
 }
 
 .header-container {
-  background-color: var(--header-bg-color);
-  border: 1.5px solid var(--header-border-color);
+  background-color: var(--main-backgraund-color);
+  border: 1.5px solid var(--main-black-color);
   border-radius: 0px 0px 8px 8px;
   display: flex;
   justify-content: space-between;
@@ -30,7 +30,6 @@ ul {
 .header-item {
   line-height: 14px;
   font-weight: 600;
-  color: var(--header-logo-color);
 }
 
 .header-logo-item {
@@ -71,8 +70,6 @@ ul {
   display: flex;
   align-items: center;
   gap: 4px;
-  color: var(--header-nav-and-icons);
-  fill: var(--header-nav-and-icons);
 }
 .header-uli-svg {
   width: 20px;
@@ -148,7 +145,7 @@ ul {
 .header-btn-svg {
   width: 20px;
   height: 20px;
-  stroke: var(--header-nav-and-icons);
+  stroke: var(--main-black-color);
 }
 
 /* .visually-hidden {
