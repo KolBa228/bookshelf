@@ -1,5 +1,5 @@
 function themeSwitching() {
-  const switcher = document.querySelector('#theme-switcher');
+  const switcher = document.querySelector('#dn');
   switcher.addEventListener('click', onThemeSwitcher);
 
   let activeTheme = localStorage.getItem('theme');
