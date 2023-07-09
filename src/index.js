@@ -13,3 +13,5 @@ suppMarkup();
 import './js/supp_swiper';
 
 import { createMarkup } from './js/popup/createMarkup';
+
+import './js/shoppingList';
