@@ -2,9 +2,13 @@ ul {
   list-style: none;
 }
 
+.header {
+  background-color: var(--main-white-color);
+}
+
 .header-container {
-  background-color: var(--main-backgraund-color);
-  border: 1.5px solid var(--main-black-color);
+  background-color: var(--header-bg-color);
+  border: 1.5px solid var(--header-border-color);
   border-radius: 0px 0px 8px 8px;
   display: flex;
   justify-content: space-between;
@@ -30,6 +34,7 @@ ul {
 .header-item {
   line-height: 14px;
   font-weight: 600;
+  color: var(--header-logo-color);
 }
 
 .header-logo-item {
@@ -58,10 +63,13 @@ ul {
   align-items: flex-start;
   gap: 10px;
   border-radius: 36px;
+  color: var(--header-nav-and-icons);
+  fill: var(--header-nav-and-icons);
 }
 .active {
   background-color: var(--yellow-color);
   font-weight: 700;
+  color: var(--main-black-color);
 }
 
 .header-nav-link {
@@ -74,6 +82,7 @@ ul {
 .header-uli-svg {
   width: 20px;
   height: 20px;
+  stroke: var(--header-nav-and-icons);
 }
 
 .header-btn-box {
@@ -82,20 +91,21 @@ ul {
   gap: 8px;
 }
 
-.header-btn {
+/* .header-btn {
   display: block;
   width: 40px;
   height: 24px;
   margin-right: auto;
   border-style: none;
   background-color: var(--main-backgraund-color);
-}
-.header-theme {
+} */
+.header-theme-btn {
   border-style: none;
   width: 40px;
   height: 24px;
   margin-right: auto;
   display: block;
+  background-color: var(--header-nav-and-icons);
 }
 .header-btn {
   width: 28px;
@@ -106,7 +116,7 @@ ul {
   justify-content: center;
   outline: none;
   border-color: transparent;
-  /* background-color: var(--main-backgraund-color); */
+  background-color: var(--header-bg-color);
 }
 
 .header-open-modal-btn {
@@ -145,7 +155,7 @@ ul {
 .header-btn-svg {
   width: 20px;
   height: 20px;
-  stroke: var(--main-black-color);
+  stroke: var(--header-nav-and-icons);
 }
 
 /* .visually-hidden {
@@ -188,6 +198,9 @@ ul {
   .header-open-modal-btn {
     display: flex;
   }
+  .header-mobile-close {
+    display: none;
+  }
 }
 /* desktop */
 @media screen and (min-width: 1440px) {
@@ -220,7 +233,7 @@ ul {
     display: flex;
   }
   .header-theme {
-    display: none;
+    display: block;
   }
   .header-mobile-close {
     display: none;
@@ -258,7 +271,7 @@ ul {
   justify-content: center;
   width: 40px;
   height: 24px;
-  background-color: var(--main-backgraund-color);
+  background-color: var(--header-bg-color);
   border-style: none;
 }
 .header-mobile-svg {
@@ -324,6 +337,7 @@ ul {
   z-index: -1;
   width: 100%;
   bottom: 1px;
+
 }
 .is-open {
   opacity: 1;
