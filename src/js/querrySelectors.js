@@ -6,6 +6,7 @@ const bookCards = document.querySelectorAll('.best-sellers-books-list');
 const backDrop = document.querySelector('.backdrop');
 const popUp = document.querySelector('.book-popup');
 
+
 export {
   bookslist1,
   bookslist2,
@@ -15,3 +16,4 @@ export {
   backDrop,
   popUp,
 };
+

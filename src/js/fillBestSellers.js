@@ -6,6 +6,9 @@ import {
   bookslist4,
 } from './querrySelectors';
 import bookCard from '../temlpates/bookCard.hbs';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import { map } from 'lodash';
 
 const fillBestSellers = async () => {
   const combinedFictionPromise = getBooksByCategory(
@@ -31,10 +34,10 @@ const fillBestSellers = async () => {
   const hardcoverFiction = results[2];
   const hardcoverNonFiction = results[3];
 
-  combinedFiction.value.length = 5;
-  combinedNonFiction.value.length = 5;
-  hardcoverFiction.value.length = 5;
-  hardcoverNonFiction.value.length = 5;
+  // combinedFiction.value.length = 4;
+  // combinedNonFiction.value.length = 4;
+  // hardcoverFiction.value.length = 4;
+  // hardcoverNonFiction.value.length = 4;
 
   // console.log(results);
 
@@ -47,6 +50,42 @@ const fillBestSellers = async () => {
   bookslist2.innerHTML = bookCard(combinedNonFiction.value);
   bookslist3.innerHTML = bookCard(hardcoverFiction.value);
   bookslist4.innerHTML = bookCard(hardcoverNonFiction.value);
+
+  const swiperSettings = {
+    modules: [Navigation],
+
+    breakpoints: {
+      375: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+
+      768: {
+        spaceBetween: 25,
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+      },
+
+      1440: {
+        spaceBetween: 24,
+        slidesPerView: 5,
+        slidesPerGroup: 1,
+      },
+    },
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  };
+
+  const firstSwiper = new Swiper('.swiper-1', swiperSettings);
+
+  const secondSwiper = new Swiper('.swiper-2', swiperSettings);
+
+  const thirdSwiper = new Swiper('.swiper-3', swiperSettings);
+
+  const fourthSwiper = new Swiper('.swiper-4', swiperSettings);
 };
 
 export default fillBestSellers;
