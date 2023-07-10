@@ -4,9 +4,13 @@ import { backDrop, bookCards, popUp, ulAll } from '../querrySelectors';
 import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
 
+const categoryList = document.querySelector('.selected-category-books-list');
+
 bookCards.forEach(item => {
   item.addEventListener('click', onBookCardClick);
 });
+
+categoryList.addEventListener('click', onBookCardClick);
 
 export async function onBookCardClick(ev) {
   ev.preventDefault();
@@ -16,7 +20,7 @@ export async function onBookCardClick(ev) {
   }
 
   console.log(ev.target);
-  const liEl = ev.target.closest('.best-sellers-list-item');
+  const liEl = ev.target.closest('.pop-up-item');
   console.log(liEl.id);
 
   const bookInfo = await getBookById(liEl.id);
