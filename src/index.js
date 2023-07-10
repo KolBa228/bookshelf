@@ -14,4 +14,5 @@ import fetchTheme from './js/theme_btn';
 fetchTheme();
 suppMarkup();
 fillCategories();
-
+import { createMarkup } from './js/popup/createMarkup';
+import './js/shoppingList';

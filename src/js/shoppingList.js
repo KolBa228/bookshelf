@@ -1,13 +1,17 @@
-<!-- shopping list -->
-<section>
-  <div class="shopping-basket">
-    <h2 class="shopping-section-title">
-      Shopping <span class="shopping-title-item">List</span>
-    </h2>
-    <!-- js -->
-    <ul class="books-shoppingList">
-      <!--  -->
+const KEY_LIST = 'bookList';
 
+const listEl = document.querySelector('.books-shoppingList');
+
+console.dir(listEl);
+
+const dataEl = localStorage.getItem(KEY_LIST);
+const parsedDataEl = JSON.parse(dataEl);
+
+function markupBooks(parsedDataEl) {
+  listEl.innerHTML = '';
+  const markupItem = parsedDataEl
+    .map(parsedDataEl => {
+      return `
       <li class="shoppingList-item">
         <img class="shoppingList-img" src="./img/book-testImg.png" alt="" />
         <div class="shoppingList-container">
@@ -64,11 +68,9 @@
                     alt=""
                   />
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
+              </li>`;
+    })
+    .join('');
+
+  listEl.innerHTML = markupItem;
+}
