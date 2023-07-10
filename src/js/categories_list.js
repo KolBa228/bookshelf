@@ -1,8 +1,7 @@
-import { categoriesList } from './querrySelectors';
 import getCategoryList from './service/getCategoryList';
+const categoriesList = document.querySelector('.categories-list');
 const fillCategories = async () => {
   const categories = await getCategoryList();
-  console.log(categories);
   const buttonHTML = [
     `<li class="categories-list-item">
       <button class="categories-button all-categories-button" type="button">

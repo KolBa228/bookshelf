@@ -4,12 +4,14 @@ import './js/categories_list';
 import { suppMarkup } from './js/create_supp_items';
 import { suppCases } from './js/create_supp_items';
 import './js/supp_swiper';
-import { createMarkup } from './js/popup/createMarkup';
+
+import { popUpMarkup } from './js/popup/popUpMarkup';
+
 import fillCategories from './js/categories_list';
-import { createMarkup } from './js/popup/createMarkup';
 import * as themeSwitching from './js/theme_switcher';
 import { log } from 'handlebars';
 import fetchTheme from './js/theme_btn';
 fetchTheme();
 suppMarkup();
 fillCategories();
+
