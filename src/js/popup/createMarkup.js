@@ -141,6 +141,5 @@ popUpBookList(createMarkup);
 // console.log(listItems);
 // console.log(Array.from(listItems));
 // -------------------------------------------------
-createMarkup();
 
 export { createMarkup };

@@ -1,3 +1,5 @@
+import getBookById from './service/getBookById';
+
 const KEY_LIST = 'bookList';
 
 const listEl = document.querySelector('.books-shoppingList');
@@ -74,3 +76,12 @@ function markupBooks(parsedDataEl) {
 
   listEl.innerHTML = markupItem;
 }
+
+const id = '643282b2e85766588626a12a';
+
+const getBookInfo = async () => {
+  const data = await getBookById(id);
+  console.log(data);
+};
+
+getBookInfo();
