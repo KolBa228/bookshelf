@@ -1,3 +1,4 @@
+import executeWithLoader from './service/executeWithLoader';
 import getBookById from './service/getBookById';
 
 const KEY_LIST = 'bookList';
@@ -105,6 +106,7 @@ const dataEl = localStorage.getItem(KEY_LIST);
 const parsedDataEl = JSON.parse(dataEl);
 
 const getBookInfo = async () => {
+  console.log(1);
   const bookDataArray = [];
   for (let i = 0; i < parsedDataEl.length; i++) {
     const data = await getBookById(parsedDataEl[i]);
@@ -112,8 +114,12 @@ const getBookInfo = async () => {
     bookDataArray.push(data);
   }
   markupBooks(bookDataArray);
+  console.log(2);
 };
 
-getBookInfo();
+executeWithLoader(() => {
+  console.log('hello');
+  getBookInfo();
+});
 
 displayMarkupBasedOnLocalStorage();

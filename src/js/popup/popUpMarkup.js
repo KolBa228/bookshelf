@@ -10,8 +10,9 @@ bookCards.forEach(item => {
   item.addEventListener('click', onBookCardClick);
 });
 
-categoryList.addEventListener('click', onBookCardClick);
-
+if (window.location.pathname === '/main') {
+  categoryList.addEventListener('click', onBookCardClick);
+}
 export async function onBookCardClick(ev) {
   ev.preventDefault();
 
