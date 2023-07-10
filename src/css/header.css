@@ -337,7 +337,6 @@ ul {
   z-index: -1;
   width: 100%;
   bottom: 1px;
-
 }
 .is-open {
   opacity: 1;
@@ -357,4 +356,3 @@ ul {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* Палинг на сигн ап и стрелка */
