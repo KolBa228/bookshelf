@@ -57,7 +57,7 @@ export async function onBookCardClick(ev) {
   popUp.innerHTML = popUpItemMarkup;
 
   const addToShopListButton = document.querySelector('.book-modal-btn');
-  const closeModal = document.querySelector('.book-modal-close');
+  const closeModalButton = document.querySelector('.book-modal-close');
 
   addToShopListButton.addEventListener('click', () => {
     let cartList = JSON.parse(localStorage.getItem('bookList'));
@@ -75,18 +75,22 @@ export async function onBookCardClick(ev) {
     }
   });
 
-  closeModal.addEventListener('click', () => {
+  const closeModal = () => {
     backDrop.classList.add('hidden');
     popUp.classList.add('hidden');
     document.body.style.overflow = 'scroll';
+  };
+
+  closeModalButton.addEventListener('click', () => closeModal());
+  backDrop.addEventListener('click', () => closeModal());
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !backDrop.classList.contains('hidden')) {
+      closeModal();
+    }
   });
 
   backDrop.classList.remove('hidden');
   popUp.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
-}
-
-
-const closeModal = () => {
-  
 }
