@@ -13,3 +13,4 @@ import fetchTheme from './js/theme_btn';
 fetchTheme();
 suppMarkup();
 fillCategories();
+import './js/modal.js/authorization'; 
