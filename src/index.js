@@ -14,7 +14,13 @@ import fetchTheme from './js/theme_btn';
 fetchTheme();
 suppMarkup();
 fillCategories();
+<<<<<<< Updated upstream
 import { createMarkup } from './js/popup/createMarkup';
 createMarkup();
+=======
+
+// import { createMarkup } from './js/popup/createMarkup';
+// createMarkup();
+>>>>>>> Stashed changes
 import './js/shoppingList';
 import './js/modal.js/authorization'; 
