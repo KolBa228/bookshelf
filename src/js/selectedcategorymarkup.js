@@ -1,5 +1,6 @@
 import getBooksByCategory from './service/getBooksByCategory';
 import bookCard from '../temlpates/bookCard.hbs';
+import categoryBook from '../temlpates/categoryBook.hbs';
 
 const request = 'Combined Print and E-Book Nonfiction';
 
@@ -8,7 +9,7 @@ const categoryTitle = document.querySelector('.category-title');
 
 const selectedCategoryMarkup = async () => {
   const data = await getBooksByCategory(request);
-  categoryWrapper.innerHTML = bookCard(data);
+  categoryWrapper.innerHTML = categoryBook(data);
   categoryTitle.textContent = request;
   const splitTitleFirst = categoryTitle.textContent
     .split(' ')

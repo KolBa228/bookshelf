@@ -1,8 +1,8 @@
 .best-sellers-header {
   margin-top: 40px;
-  color: #111;
-  font-size: 48px;
-  line-height: 52px;
+  color: var(--cat-title);
+  font-size: 32px;
+  line-height: 1.18;
   letter-spacing: -1.92px;
   margin-bottom: 40px;
 }
@@ -21,11 +21,11 @@
 
 .best-sellers-second-header {
   margin-bottom: 18px;
-  color: #b4afaf;
+  color: var(--pre-title);
   font-family: DM Sans;
   font-size: 14px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 1.28;
   letter-spacing: 0.42px;
   text-transform: uppercase;
 }
@@ -48,7 +48,7 @@
 }
 
 .book-title {
-  color: #111;
+  color: var(--cat-title);
   font-family: DM Sans;
   font-size: 16px;
   font-style: normal;
