@@ -1,122 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Categories</title>
-    <!-- NORMALAISE -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css"
-    />
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+<html lang="en" data-theme="light">
 
-  <body>
-    <header class="header">
-      <div class="header-container">
-        <!-- <h1>Header</h1> -->
-        <ul class="header-logo-list">
-          <li class="header-logo-item">
-            <a href="#">
-              <svg class="header-svg-logo">
-                <use href="./img/symbol-defs.svg#icon-logo"></use>
-              </svg>
-            </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categories</title>
+  <!-- NORMALAISE -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css" />
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/test.scss">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <!-- <h1>Header</h1> -->
+      <ul class="header-logo-list">
+        <li class="header-logo-item">
+          <a href="#">
+            <svg class="header-svg-logo">
+              <use href="./img/symbol-defs.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="header-logo-item">
+          <a class="header-item" href="/src/main.html">Bookshelf</a>
+        </li>
+      </ul>
+
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-item  ">
+            <a href="./main.html">HOME</a>
           </li>
-          <li class="header-logo-item">
-            <a class="header-item" href="#">Bookshelf</a>
+
+          <li class="header-nav-item active">
+            <a class="header-nav-link" href="/src/shoping_list.html">SHOPPING LIST
+              <svg class="header-uli-svg">
+                <use href="./img/symbol-defs.svg#icon-uil_cart"></use>
+
+              </svg></a>
           </li>
         </ul>
-    
-        <nav class="header-nav">
-          <ul class="header-nav-list">
-            <li class="header-nav-item  ">
-              <a href="./main.html">HOME</a>
-            </li>
-    
-            <li class="header-nav-item active">
-              <a class="header-nav-link" href="/src/shoping_list.html"
-                >SHOPPING LIST
-                <svg class="header-uli-svg">
-                  <use href="./img/symbol-defs.svg#icon-uil_cart"></use>
-                  >
-                </svg></a
-              >
-            </li>
-          </ul>
-        </nav>
-    
-        <div class="header-btn-box">
-          <!-- statick btn -->
-          <button class="header-theme-btn" id="theme-switcher" ></button>
-    
-          <!-- desktop btn -->
-          <button class="header-open-modal-btn">
-            <span class="btn-txt">sing up</span>
-            <svg class="btn-arrow">
-              <use href="./img/symbol-defs.svg#icon-arrow-narrow-right"></use>
-            </svg>
-            <svg class="header-modal-svg">
-              <use href="./img/symbol-defs.svg#icon-user"></use>
-            </svg>
-          </button>
-    
-          <!-- mobile & tabl btn -->
-          <button class="header-btn sub js-header-open-modal">
-            <svg class="header-btn-svg">
-              <use href="./img/symbol-defs.svg#icon-mobile-menu"></use>
-            </svg>
-          </button>
-    
-          <button class="header-mobile-close js-header-close is-hidden">
-            <svg class="header-mobile-svg">
-              <use href="./img/symbol-defs.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    
-      <!-- mobile header menu -->
-      <div class="header-mobile-menu js-mobile-menu">
-        <div class="menu-btn-container">
-          <ul class="menu-btn-list">
-            <li class="menu-btn-item ">
-              <a href="/src/main.html">Home</a>
-            </li>
-    
-            <li class="menu-btn-item active">
-              <a class="menu-btn-link" href="/src/shoping_list.html"
-                >Shopping list
-                <svg class="header-uli-svg">
-                  <use href="./img/symbol-defs.svg#icon-uil_cart"></use>
-                  >
-                </svg></a
-              >
-            </li>
-          </ul>
-        </div>
-    
-        <img class="mobile-img" src="./img/mobile-bgc.png" alt="" />
-      </div>
-    </header>
+      </nav>
 
-    <main>
-      <div class="shoppingList-main-content">
-        <div class="shoppingList-support">
-          <include src="./partials/sponsors.html"></include>
+      <div class="header-btn-box">
+        <!-- statick btn -->
+        <div class="toggleWrapper">
+          <input type="checkbox" class="dn" id="dn" />
+          <label for="dn" class="toggle">
+            <span class="toggle__handler">
+              <span class="crater crater--1"></span>
+              <span class="crater crater--2"></span>
+              <span class="crater crater--3"></span>
+            </span>
+            <span class="star star--1"></span>
+            <span class="star star--2"></span>
+            <span class="star star--3"></span>
+            <span class="star star--4"></span>
+            <span class="star star--5"></span>
+            <span class="star star--6"></span>
+          </label>
         </div>
-        <include src="./partials/shopping_section.html"></include>
+        <!-- desktop btn -->
+        <button class="header-open-modal-btn">
+          <span class="btn-txt">sing up</span>
+          <svg class="btn-arrow">
+            <use href="./img/symbol-defs.svg#icon-arrow-narrow-right"></use>
+          </svg>
+          <svg class="header-modal-svg">
+            <use href="./img/symbol-defs.svg#icon-user"></use>
+          </svg>
+        </button>
+
+        <!-- mobile & tabl btn -->
+        <button class="header-btn sub js-header-open-modal">
+          <svg class="header-btn-svg">
+            <use href="./img/symbol-defs.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+
+        <button class="header-mobile-close js-header-close is-hidden">
+          <svg class="header-mobile-svg">
+            <use href="./img/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
-    </main>
-    <script src="./index.js" type="module"></script>
-  </body>
+    </div>
+
+    <!-- mobile header menu -->
+    <div class="header-mobile-menu js-mobile-menu">
+      <div class="menu-btn-container">
+        <ul class="menu-btn-list">
+          <li class="menu-btn-item ">
+            <a href="/src/main.html">Home</a>
+          </li>
+
+          <li class="menu-btn-item active">
+            <a class="menu-btn-link" href="/src/shoping_list.html">Shopping list
+              <svg class="header-uli-svg">
+                <use href="./img/symbol-defs.svg#icon-uil_cart"></use>
+
+              </svg></a>
+          </li>
+        </ul>
+      </div>
+
+      <img class="mobile-img" src="./img/mobile-bgc.png" alt="" />
+    </div>
+  </header>
+
+  <main>
+    <div class="shoppingList-main-content">
+      <div class="shoppingList-support">
+        <include src="./partials/sponsors.html"></include>
+      </div>
+      <include src="./partials/shopping_section.html"></include>
+    </div>
+  </main>
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>
