@@ -1,13 +1,19 @@
-<!-- shopping list -->
-<section>
-  <div class="shopping-basket">
-    <h2 class="shopping-section-title">
-      Shopping <span class="shopping-title-item">List</span>
-    </h2>
-    <!-- js -->
-    <ul class="books-shoppingList">
-      <!--  -->
+import getBookById from './service/getBookById';
 
+const KEY_LIST = 'bookList';
+
+const listEl = document.querySelector('.books-shoppingList');
+
+console.dir(listEl);
+
+const dataEl = localStorage.getItem(KEY_LIST);
+const parsedDataEl = JSON.parse(dataEl);
+
+function markupBooks(parsedDataEl) {
+  listEl.innerHTML = '';
+  const markupItem = parsedDataEl
+    .map(parsedDataEl => {
+      return `
       <li class="shoppingList-item">
         <img class="shoppingList-img" src="./img/book-testImg.png" alt="" />
         <div class="shoppingList-container">
@@ -36,7 +42,7 @@
                 <a class="shop-shoppingList-link" href="https://www.amazon.com">
                   <img
                     class="shop-shoppingList-img1"
-                    src="./img/amazon.png"
+                    src="./img/1-amazon.jpg"
                     alt=""
                   />
                 </a>
@@ -48,7 +54,7 @@
                 >
                   <img
                     class="shop-shoppingList-img2"
-                    src="./img/book.png"
+                    src="./img/2-ibook.jpg"
                     alt=""
                   />
                 </a>
@@ -60,15 +66,22 @@
                 >
                   <img
                     class="shop-shoppingList-img2"
-                    src="./img/bookshop.png"
+                    src="./img/3-bookshop.jpg"
                     alt=""
                   />
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
+              </li>`;
+    })
+    .join('');
+
+  listEl.innerHTML = markupItem;
+}
+
+const id = '643282b2e85766588626a12a';
+
+const getBookInfo = async () => {
+  const data = await getBookById(id);
+  console.log(data);
+};
+
+getBookInfo();

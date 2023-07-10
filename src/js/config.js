@@ -3,7 +3,7 @@ const apiConfig = {
   getCategoryList: 'books/category-list',
   getTopBooks: 'books/top-books',
   getBooksByCategory: 'books/category',
-  getBookById: 'books/', // {id}
+  getBookById: 'books', // {id}
 };
 
 export { apiConfig };
