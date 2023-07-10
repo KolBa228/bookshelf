@@ -19,9 +19,7 @@ export async function onBookCardClick(ev) {
     return;
   }
 
-  console.log(ev.target);
   const liEl = ev.target.closest('.pop-up-item');
-  console.log(liEl.id);
 
   const bookInfo = await getBookById(liEl.id);
 
@@ -63,7 +61,14 @@ export async function onBookCardClick(ev) {
   const addToShopListButton = document.querySelector('.book-modal-btn');
   const closeModalButton = document.querySelector('.book-modal-close');
 
-  addToShopListButton.addEventListener('click', () => {
+  addToShopListButton.addEventListener('click', () => addToCart());
+
+  const closeModal = () => {
+    backDrop.classList.add('hidden');
+    popUp.classList.add('hidden');
+    document.body.style.overflow = 'scroll';
+  };
+  const addToCart = () => {
     let cartList = JSON.parse(localStorage.getItem('bookList'));
 
     if (!Array.isArray(cartList)) {
@@ -77,16 +82,17 @@ export async function onBookCardClick(ev) {
       localStorage.setItem('bookList', JSON.stringify(cartList));
       Notiflix.Notify.success('Book has been added successfully');
     }
-  });
-
-  const closeModal = () => {
-    backDrop.classList.add('hidden');
-    popUp.classList.add('hidden');
-    document.body.style.overflow = 'scroll';
   };
 
   closeModalButton.addEventListener('click', () => closeModal());
-  backDrop.addEventListener('click', () => closeModal());
+
+  backDrop.addEventListener('click', ev => {
+    if (!ev.target.classList.value.includes('backdrop')) {
+      return;
+    }
+
+    closeModal();
+  });
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape' && !backDrop.classList.contains('hidden')) {
