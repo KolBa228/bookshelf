@@ -10,6 +10,14 @@
 
 .shopping-section-title {
   margin: 40px 0;
+  font-size: 32px;
+  line-height: 1.18;
+}
+@media (min-width: 768px) {
+  .shopping-section-title {
+    font-size: 48px;
+    line-height: 0.9;
+  }
 }
 
 @media (min-width: 1392px) {
@@ -110,9 +118,9 @@
 }
 
 /* Hidden shop pictures  */
-.box-shoppingList-shop {
+/* .box-shoppingList-shop {
   display: none;
-}
+} */
 
 .shop-shoppingList-link {
   display: flex;
@@ -212,4 +220,48 @@
 .shop-shoppingList-img2 {
   width: 16px;
   height: 16px;
+}
+
+.shoppingList-text {
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 244px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .shoppingList-text {
+    margin-top: 100px;
+    font-size: 18px;
+    line-height: 1.33;
+    width: 349px;
+  }
+}
+
+.shoppingList-img-empty {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 14px;
+  width: 265px;
+  height: 198px;
+  text-align: center;
+
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-image: url(../img/emptySmall.png);
+}
+
+@media (min-width: 768px) {
+  .shoppingList-img-empty {
+    margin-top: 20px;
+    width: 322px;
+    height: 241px;
+  }
 }
