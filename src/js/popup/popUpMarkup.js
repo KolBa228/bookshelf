@@ -1,23 +1,25 @@
+import Notiflix from 'notiflix';
 import bookCard from '../../temlpates/bookCard.hbs';
-import { backDrop, popUp, ulAll } from '../querrySelectors';
+import { backDrop, bookCards, popUp, ulAll } from '../querrySelectors';
 import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
 
-ulAll.forEach(ul => {
-  ul.addEventListener('click', onBookCardClick);
+bookCards.forEach(item => {
+  item.addEventListener('click', onBookCardClick);
 });
 
 export async function onBookCardClick(ev) {
   ev.preventDefault();
 
-  if (ev.target.nodeName === 'LI') {
+  if (ev.target.nodeName === 'UL') {
     return;
   }
 
-  const bookInfo = await getBookById(ev.target.id);
-  //   console.log(ev.target.id);
+  console.log(ev.target);
+  const liEl = ev.target.closest('.best-sellers-list-item');
+  console.log(liEl.id);
 
-  console.log(bookInfo);
+  const bookInfo = await getBookById(liEl.id);
 
   const popUpItemMarkup = `<div class='book-modal-container'>
   <img src="${bookInfo.book_image}" alt="${bookInfo.title}" class="book-modal-img"/>
@@ -48,22 +50,43 @@ export async function onBookCardClick(ev) {
 
     <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn'>Add to shopping list</button>
 
-    <p class='book-modal-buy'>Сongratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.</p>
     <button class='book-modal-close' id='js-book-modal-btn-close'>
     <svg class='icon-book-modal-close'><use href='./img/symbol-defs.svg#icon-close'></use></svg>
     </button>`;
 
   popUp.innerHTML = popUpItemMarkup;
 
-  console.log(popUpItemMarkup);
-
   const addToShopListButton = document.querySelector('.book-modal-btn');
-  addToShopListButton.addEventListener(
-    'click',
-    localStorage.setItem('bookList', JSON.stringify(bookInfo))
-  );
+  const closeModal = document.querySelector('.book-modal-close');
+
+  addToShopListButton.addEventListener('click', () => {
+    let cartList = JSON.parse(localStorage.getItem('bookList'));
+
+    if (!Array.isArray(cartList)) {
+      cartList = [];
+    }
+    const bookId = bookInfo._id;
+    if (cartList.includes(bookId)) {
+      Notiflix.Notify.warning('This book is already in the list');
+    } else {
+      cartList.push(bookId);
+      localStorage.setItem('bookList', JSON.stringify(cartList));
+      Notiflix.Notify.success('Book has been added successfully');
+    }
+  });
+
+  closeModal.addEventListener('click', () => {
+    backDrop.classList.add('hidden');
+    popUp.classList.add('hidden');
+    document.body.style.overflow = 'scroll';
+  });
 
   backDrop.classList.remove('hidden');
   popUp.classList.remove('hidden');
   document.body.style.overflow = 'hidden';
+}
+
+
+const closeModal = () => {
+  
 }

@@ -1,14 +1,8 @@
 {{#each this}}
 
-  <li class='best-sellers-list-item'>
- 
-      <button >
-        <img src='{{book_image}}' class='book-cover-img' alt='{{list_name}}' id={{_id}} />
-        <p class='book-title'>{{title}}</p>
-        <p class='book-author'>{{author}}</p>
-      </button>
-      
+  <li class='best-sellers-list-item' id={{_id}}>
+    <img src='{{book_image}}' class='book-cover-img' alt='{{list_name}}' />
+    <p class='book-title'>{{title}}</p>
+    <p class='book-author'>{{author}}</p>
   </li>
 {{/each}}
-
-

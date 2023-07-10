@@ -26,7 +26,7 @@ span {
     max-width: 704px;
     padding-left: 32px;
     padding-right: 32px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 }
 
