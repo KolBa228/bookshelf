@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Categories</title>
-    <!-- NORMALAISE -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css"
-    />
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/test.scss" />
-  </head>
 
-  <body>
-    <include src="./partials/header.html"></include>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categories</title>
+  <!-- NORMALAISE -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css" />
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/test.scss" />
+</head>
 
-    <main>
-     
-        <include src="./partials/shopping_section.html"></include>
-      </div>
-    </main>
-    <div class="loader">
-      <img class="loader-image" src="./img/loader.svg" alt="Загрузка..." />
+<body>
+  <include src="./partials/header.html"></include>
+
+  <main>
+    <include src="./partials/sponsors.html"></include>
+    <include src="./partials/shopping_section.html"></include>
     </div>
-    <script src="./js/shoppingList.js" type="module"></script>
-    <script src="./index.js" type="module"></script>
-  </body>
+  </main>
+  <div class="loader">
+    <img class="loader-image" src="./img/loader.svg" alt="Загрузка..." />
+  </div>
+  <script src="./js/shoppingList.js" type="module"></script>
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>
