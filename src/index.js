@@ -18,3 +18,4 @@ fillCategories();
 import { createMarkup } from './js/popup/createMarkup';
 createMarkup();
 import './js/shoppingList';
+import './js/turn_nav_colros'
