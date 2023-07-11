@@ -14,8 +14,8 @@ import fetchTheme from './js/theme_btn';
 fetchTheme();
 suppMarkup();
 fillCategories();
+import './js/modal.js/authorization';
 import './js/shoppingList';
-import './js/modal.js/authorization'; 
-import './js/autorization/app'
-import './js/autorization/auth'
-import './js/autorization/comments'
+import './js/autorization/app';
+import './js/autorization/auth';
+import './js/autorization/comments';

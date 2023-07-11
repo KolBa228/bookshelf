@@ -1,3 +1,4 @@
+import executeWithLoader from './service/executeWithLoader';
 import getBookById from './service/getBookById';
 
 const KEY_LIST = 'bookList';
@@ -6,13 +7,13 @@ const listEl = document.querySelector('.books-shoppingList');
 let imgEmptyLarge = new URL('../img/emptyLarge@2x.png', import.meta.url);
 let imgEmpty = new URL('../img/emptySmall.png', import.meta.url);
 
-function displayMarkupBasedOnLocalStorage() {
+async function displayMarkupBasedOnLocalStorage() {
   const dataEl = localStorage.getItem(KEY_LIST);
   const parsedDataEl = JSON.parse(dataEl);
 
   if (parsedDataEl && parsedDataEl.length > 0) {
     // Display markup when there are items in local storage
-    getBookInfo();
+    await getBookInfo();
   } else {
     // Display alternative markup when local storage is empty
     const emptyMarkup = markupEmptyPage;
@@ -33,9 +34,7 @@ function markupBooks(data) {
               <p class="shoppingList-category">${book.list_name}</p>
             </div>
             <button class="shoppingList-trash-btn" id=${book._id}>
-              <svg class="shoppingList-icon-trash">
-                <use href="./img/symbol-defs.svg#icon-trash"></use>
-              </svg>
+              x
             </button>
             </button>
           </div>
@@ -100,20 +99,30 @@ This page is empty, add some books and proceed to order.
 </picture>
 </a></li>`;
 
-const dataEl = localStorage.getItem(KEY_LIST);
-
-const parsedDataEl = JSON.parse(dataEl);
-
 const getBookInfo = async () => {
+  const dataEl = localStorage.getItem(KEY_LIST);
+  const parsedDataEl = JSON.parse(dataEl);
   const bookDataArray = [];
   for (let i = 0; i < parsedDataEl.length; i++) {
     const data = await getBookById(parsedDataEl[i]);
-    console.log(data);
     bookDataArray.push(data);
   }
   markupBooks(bookDataArray);
+  const deleteBookButtons = document.querySelectorAll(
+    '.shoppingList-trash-btn'
+  );
+
+  deleteBookButtons.forEach(el => {
+    el.addEventListener('click', e => {
+      const bookList = JSON.parse(localStorage.getItem(KEY_LIST));
+      const idForDelete = e.target.id;
+      const filteredList = bookList.filter(id => idForDelete !== id);
+      localStorage.setItem('bookList', JSON.stringify(filteredList));
+      displayMarkupBasedOnLocalStorage();
+    });
+  });
 };
 
-getBookInfo();
-
-displayMarkupBasedOnLocalStorage();
+executeWithLoader(async () => {
+  await displayMarkupBasedOnLocalStorage();
+});
