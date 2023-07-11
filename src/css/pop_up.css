@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
-    background: rgba(17, 17, 17, 0.40);
+    background: var(--bgd-backdrop);
     pointer-events: all;
     overflow-y: auto;
 }
@@ -114,6 +114,10 @@
 
 .icon-item {
     filter: grayscale(100%);
+}
+
+.amazon-icon {
+    filter: var(--amazon-icon);
 }
 
 .book-modal-btn {

@@ -24,8 +24,6 @@ export async function onBookCardClick(ev) {
 
   const bookInfo = await getBookById(liEl.id);
 
-  // <img id=${bookInfo.id} src="${require('./img/default_cover.jpg')}"/>
-
   const popUpItemMarkup = `<div class='book-modal-container'>
   <img src="${bookInfo.book_image}" alt="${bookInfo.title}" class="book-modal-img default-image"/>
   
@@ -36,7 +34,7 @@ export async function onBookCardClick(ev) {
         <ul class='icon-book-modal-list'>
         <li class='icon-item'>
             <a href="${bookInfo.buy_links[0].url}" target="_blank">
-            <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon">
+            <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon" class="amazon-icon">
             </a>
         </li>
         <li class='icon-item'>
@@ -58,8 +56,6 @@ export async function onBookCardClick(ev) {
     <button class='book-modal-close' id='js-book-modal-btn-close'>
     <svg class='icon-book-modal-close'><use href='${icon}#icon-close'></use></svg>
     </button>`;
-
-  console.log(icon);
 
   popUp.innerHTML = popUpItemMarkup;
 

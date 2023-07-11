@@ -6,4 +6,6 @@
     --blue-color: #4F2EE8;
     --yellow-color: #EAC645;
     --cubic: cubic-bezier(0.53, 0.36, 0.67, 1.07);
+    --filter: grayscale(100%);
+    --bgd-backdrop: rgba(17, 17, 17, 0.40);
 }
