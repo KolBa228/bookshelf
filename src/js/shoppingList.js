@@ -1,18 +1,20 @@
+import executeWithLoader from './service/executeWithLoader';
 import getBookById from './service/getBookById';
 
 const KEY_LIST = 'bookList';
 
 const listEl = document.querySelector('.books-shoppingList');
+
 let imgEmptyLarge = new URL('../img/emptyLarge@2x.png', import.meta.url);
 let imgEmpty = new URL('../img/emptySmall.png', import.meta.url);
 
-function displayMarkupBasedOnLocalStorage() {
+async function displayMarkupBasedOnLocalStorage() {
   const dataEl = localStorage.getItem(KEY_LIST);
   const parsedDataEl = JSON.parse(dataEl);
 
   if (parsedDataEl && parsedDataEl.length > 0) {
     // Display markup when there are items in local storage
-    getBookInfo();
+    await getBookInfo();
   } else {
     // Display alternative markup when local storage is empty
     const emptyMarkup = markupEmptyPage;
@@ -33,9 +35,7 @@ function markupBooks(data) {
               <p class="shoppingList-category">${book.list_name}</p>
             </div>
             <button class="shoppingList-trash-btn" id=${book._id}>
-              <svg class="shoppingList-icon-trash">
-                <use href="./img/symbol-defs.svg#icon-trash"></use>
-              </svg>
+              x
             </button>
             </button>
           </div>
@@ -44,41 +44,22 @@ function markupBooks(data) {
           </p>
           <div class="shoppingList-link-container">
             <p class="text-shoppingList-author">${book.author}</p>
-            <ul class="box-shoppingList-shop">
-              <li>
-                <a class="shop-shoppingList-link" href=${book.buy_links[0]}>
-                  <img
-                    class="shop-shoppingList-img1"
-                    src="./img/amazon.png"
-                    alt=""
-                  />
+            <ul class='icon-book-modal-list shopping-list'>
+            <li>
+                <a href=${book.buy_links[0].url} target="_blank">
+                <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon" class="image-link1">
                 </a>
-              </li>
-              <li>
-                <a
-                  class="shop-shoppingList-link"
-                  href=${book.buy_links[1]}
-                >
-                  <img
-                    class="shop-shoppingList-img2"
-                    src="./img/book.png"
-                    alt=""
-                  />
+            </li>
+            <li>
+                <a href=${book.buy_links[1].url} target="_blank">
+                <img src="https://i.ibb.co/nj6G7gJ/2-ibook.png" alt="ibook" class="image-link2">
                 </a>
-              </li>
-              <li>
-                <a
-                  class="shop-shoppingList-link"
-                  href=${book.buy_links[4]}
-                >
-                  <img
-                    class="shop-shoppingList-img2"
-                    src="./img/bookshop.png"
-                    alt=""
-                  />
+            </li>
+            <li>
+                <a href=${book.buy_links[4].url} target="_blank">
+                <img src="https://i.ibb.co/fFPnVJN/3-bookshop.png" alt="bookshop" class="image-link2">
                 </a>
-              </li> 
-              </ul>
+            </li>
               </div>
             </div>
           </li>`;
@@ -100,20 +81,31 @@ This page is empty, add some books and proceed to order.
 </picture>
 </a></li>`;
 
-const dataEl = localStorage.getItem(KEY_LIST);
-
-const parsedDataEl = JSON.parse(dataEl);
-
 const getBookInfo = async () => {
+  const dataEl = localStorage.getItem(KEY_LIST);
+  const parsedDataEl = JSON.parse(dataEl);
   const bookDataArray = [];
   for (let i = 0; i < parsedDataEl.length; i++) {
     const data = await getBookById(parsedDataEl[i]);
-    console.log(data);
     bookDataArray.push(data);
   }
   markupBooks(bookDataArray);
+  
+  const deleteBookButtons = document.querySelectorAll(
+    '.shoppingList-trash-btn'
+  );
+
+  deleteBookButtons.forEach(el => {
+    el.addEventListener('click', e => {
+      const bookList = JSON.parse(localStorage.getItem(KEY_LIST));
+      const idForDelete = e.target.id;
+      const filteredList = bookList.filter(id => idForDelete !== id);
+      localStorage.setItem('bookList', JSON.stringify(filteredList));
+      displayMarkupBasedOnLocalStorage();
+    });
+  });
 };
 
-getBookInfo();
-
-displayMarkupBasedOnLocalStorage();
+executeWithLoader(async () => {
+  await displayMarkupBasedOnLocalStorage();
+});

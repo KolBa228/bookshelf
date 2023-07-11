@@ -3,16 +3,19 @@ import bookCard from '../../temlpates/bookCard.hbs';
 import { backDrop, bookCards, popUp, ulAll } from '../querrySelectors';
 import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
+
 import icon from '../../img/symbol-defs.svg';
 
 const categoryList = document.querySelector('.selected-category-books-list');
+
 
 bookCards.forEach(item => {
   item.addEventListener('click', onBookCardClick);
 });
 
-categoryList.addEventListener('click', onBookCardClick);
-
+if (window.location.pathname === '/main') {
+  categoryList.addEventListener('click', onBookCardClick);
+}
 export async function onBookCardClick(ev) {
   ev.preventDefault();
 
@@ -23,8 +26,7 @@ export async function onBookCardClick(ev) {
   const liEl = ev.target.closest('.pop-up-item');
 
   const bookInfo = await getBookById(liEl.id);
-
-  // <img id=${bookInfo.id} src="${require('./img/default_cover.jpg')}"/>
+  checkData(bookInfo);
 
   const popUpItemMarkup = `<div class='book-modal-container'>
   <img src="${bookInfo.book_image}" alt="${bookInfo.title}" class="book-modal-img default-image"/>
