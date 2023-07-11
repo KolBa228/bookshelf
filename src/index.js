@@ -12,12 +12,6 @@ import { log } from 'handlebars';
 import fetchTheme from './js/theme_btn';
 fetchTheme();
 suppMarkup();
-
-
-
-
-
-
 import './js/turn_nav_colros'
 
 // import './js/modal.js/authorization';

@@ -26,7 +26,7 @@ export async function onBookCardClick(ev) {
   const liEl = ev.target.closest('.pop-up-item');
 
   const bookInfo = await getBookById(liEl.id);
-  checkData(bookInfo);
+  // checkData(bookInfo);
 
   const popUpItemMarkup = `<div class='book-modal-container'>
   <img src="${bookInfo.book_image}" alt="${bookInfo.title}" class="book-modal-img default-image"/>
@@ -60,9 +60,6 @@ export async function onBookCardClick(ev) {
     <button class='book-modal-close' id='js-book-modal-btn-close'>
     <svg class='icon-book-modal-close'><use href='${icon}#icon-close'></use></svg>
     </button>`;
-
-  console.log(icon);
-
   popUp.innerHTML = popUpItemMarkup;
 
   const addToShopListButton = document.querySelector('.book-modal-btn');
