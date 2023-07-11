@@ -1,5 +1,7 @@
 import getCategoryList from './service/getCategoryList';
 import getCategoryFromBtns from './categories/get_category_from_btn';
+import selectedCategoryMarkup from './categories/selectedcategorymarkup';
+import { onBookCardClick } from './popup/popUpMarkup';
 const categoriesList = document.querySelector('.categories-list');
 const fillCategories = async () => {
   const categories = await getCategoryList();
@@ -12,9 +14,18 @@ const fillCategories = async () => {
   });
   categoriesList.innerHTML = buttonHTML.join(' ') + tempHTML.join(' ');
   const categoriesBtn = document.querySelectorAll('.categories-button');
-  categoriesBtn.forEach(e => {
-    e.addEventListener('click', () => {
-      const category = getCategoryFromBtns();
+  categoriesBtn.forEach(el => {
+    el.addEventListener('click', async event => {
+      // console.log(event);
+      const category = await getCategoryFromBtns(event);
+      selectedCategoryMarkup(category);
+      const categoryList = document.querySelector(
+        '.selected-category-books-list'
+      );
+      console.log(categoryList);
+      categoryList.addEventListener('click', () => {
+        onBookCardClick(event);
+      });
     });
   });
 };
