@@ -354,7 +354,7 @@
   }
 }
 
-.support-box {
+.shop-cart-support-box {
   display: none;
   margin-right: 40px;
 }
@@ -363,7 +363,7 @@
   .main-content-container {
     display: flex;
   }
-  .support-box {
+  .shop-cart-support-box {
     display: block;
   }
 }
