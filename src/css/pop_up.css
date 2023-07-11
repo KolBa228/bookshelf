@@ -11,61 +11,195 @@
     transition: all 0.3s ease-in-out;
     background: rgba(17, 17, 17, 0.40);
     pointer-events: all;
+    overflow-y: auto;
 }
 
 .book-popup {
-    width: 580px;
-    background: #fff;
-    padding: 40px 40px 40px;
-    position: relative;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 335px;
+    padding: 40px 24px;
+    background: var(--popup-bg);
+    border: 2px solid;
+    border-color: var(--popup-border);
+    border-radius: 18px;
+
+    position: relative;
+}
+
+.icon-book-modal-close {
+    stroke: var(--start-icons-and-btn-color);
+    margin: -6%;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+/* перевірити вар  */
+.icon-book-modal-close:hover,
+.icon-book-modal-close:focus {
+    stroke: var(--cat-list-focus-color);
+    transition: stroke 250ms var(--cubic);
 }
 
 .book-modal-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.book-modal-img {
-    width: 192px;
-    margin-right: 24px;
-    margin-bottom: 40px;
+    max-width: 335px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .book-modal-close {
     position: absolute;
-    width: 28px;
-    height: 28px;
-    top: 24px;
-    right: 24px;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background-color: inherit;
 
 }
 
-.icon-book-modal-close {
-    width: 28px;
-    height: 28px;
+.book-modal-img {
+    width: 288px;
 }
 
-.book-modal-btn {
-    border-radius: 40px;
-    border: 2px solid #4F2EE8;
-    background: #FFF;
-    width: 499px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 18px;
+.default-image {
+    width: 288px;
+    height: 408px;
+    background-image: url(../img/default_cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.book-modal-title {
+    margin-top: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.18px;
-    text-transform: uppercase;
+    line-height: 18px;
+    letter-spacing: -0.64px;
+    color: var(--book-title);
+}
+
+.book-modal-author {
+    margin-top: 4px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.48px;
+    color: var(--mute-autor);
+}
+
+.book-modal-desc {
+    width: 288px;
+    margin-top: 18px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+    color: var(--book-description);
 }
 
 .icon-book-modal-list {
+    margin-top: 14px;
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    margin-top: 28px;
     align-items: center;
+}
+
+.icon-item {
+    filter: grayscale(100%);
+}
+
+.book-modal-btn {
+    width: 212px;
+    margin-top: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 40px;
+    border: 2px solid #4F2EE8;
+
+    color: var(--cat-btn-text);
+    background: var(--popup-bg);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.14px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+    .book-popup {
+        max-width: 580px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .icon-book-modal-close {
+        margin: -15%;
+        width: 28px;
+        height: 28px;
+    }
+
+    .book-modal-container {
+        display: flex;
+        max-width: 580px;
+    }
+
+    .book-modal-img {
+        width: 192px;
+        margin-right: 24px;
+    }
+
+    .default-image {
+        width: 192px;
+        height: 280px;
+        margin-right: 24px;
+
+    }
+
+    .book-modal-title {
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.96px;
+    }
+
+    .book-modal-author {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: -0.56px;
+    }
+
+    .book-modal-desc {
+        width: 280px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .icon-book-modal-list {
+        margin-top: 20px;
+    }
+
+    .book-modal-btn {
+        margin-top: 40px;
+        width: 500px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.18px;
+    }
 }
