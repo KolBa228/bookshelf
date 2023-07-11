@@ -3,6 +3,7 @@ import bookCard from '../../temlpates/bookCard.hbs';
 import { backDrop, bookCards, popUp, ulAll } from '../querrySelectors';
 import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
+import icon from '../../img/symbol-defs.svg';
 
 const categoryList = document.querySelector('.selected-category-books-list');
 
@@ -53,8 +54,10 @@ export async function onBookCardClick(ev) {
     <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn'>Add to shopping list</button>
 
     <button class='book-modal-close' id='js-book-modal-btn-close'>
-    <svg class='icon-book-modal-close'><use href='./img/symbol-defs.svg#icon-close'></use></svg>
+    <svg class='icon-book-modal-close'><use href='${icon}#icon-close'></use></svg>
     </button>`;
+
+  console.log(icon);
 
   popUp.innerHTML = popUpItemMarkup;
 
