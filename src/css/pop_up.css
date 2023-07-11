@@ -15,8 +15,11 @@
 }
 
 .book-popup {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 335px;
-    max-height: 764px;
     padding: 40px 24px;
     background: var(--popup-bg);
     border: 2px solid;
@@ -38,7 +41,7 @@
 .icon-book-modal-close:hover,
 .icon-book-modal-close:focus {
     stroke: var(--cat-list-focus-color);
-    transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: stroke 250ms var(--cubic);
 }
 
 .book-modal-container {
@@ -53,6 +56,8 @@
     height: 24px;
     top: 12px;
     right: 12px;
+    border: none;
+    background-color: inherit;
 
 }
 
@@ -67,6 +72,7 @@
     font-weight: 700;
     line-height: 18px;
     letter-spacing: -0.64px;
+    color: var(--book-title);
 }
 
 .book-modal-author {
@@ -76,6 +82,7 @@
     font-weight: 400;
     line-height: 14px;
     letter-spacing: -0.48px;
+    color: var(--mute-autor);
 }
 
 .book-modal-desc {
@@ -86,6 +93,7 @@
     font-weight: 400;
     line-height: 18px;
     letter-spacing: -0.56px;
+    color: var(--book-description);
 }
 
 .icon-book-modal-list {
@@ -101,10 +109,11 @@
 }
 
 .book-modal-btn {
-    display: inline-block;
-    text-align: center;
+    /* display: inline-block;
+    text-align: center; */
     width: 212px;
     margin-top: 40px;
+
     margin-left: auto;
     margin-right: auto;
     padding-top: 14px;
