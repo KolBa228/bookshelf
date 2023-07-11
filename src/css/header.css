@@ -33,17 +33,16 @@ ul {
 
 .header-logo-item {
   margin-right: 8px;
+  color: var(--header-logo-color);
 }
 .header-link {
   line-height: 14px;
   font-weight: 600;
-  color: var(--header-logo-color);
-  padding: 8px 16px;
 }
 .header-svg-logo {
   width: 24px;
   height: 24px;
-  padding: 8px 16px;
+  stroke: var(--main-backgraund-color);
 }
 
 /* navigation side */
