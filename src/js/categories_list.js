@@ -2,6 +2,7 @@ import getCategoryList from './service/getCategoryList';
 import getCategoryFromBtns from './categories/get_category_from_btn';
 import selectedCategoryMarkup from './categories/selectedcategorymarkup';
 import { onBookCardClick } from './popup/popUpMarkup';
+const bookLoader = document.querySelector('.books-loader-image');
 const categoriesList = document.querySelector('.categories-list');
 const categoriesSection = document.querySelector('.category-section');
 const bestSellersSection = document.querySelector('.container-best-sellers');
@@ -32,8 +33,6 @@ const fillCategories = async () => {
 
   categoriesBtn.forEach(el => {
     el.addEventListener('click', async event => {
-
-
       categoriesBtn.forEach(element => {
         element.classList.remove('active-button');
       });
@@ -48,7 +47,15 @@ const fillCategories = async () => {
       }
 
       const category = await getCategoryFromBtns(event);
+
+      categoriesSection.classList.add('hidden');
+      bookLoader.classList.remove('hidden');
+
       await selectedCategoryMarkup(category);
+
+      bookLoader.classList.add('hidden');
+      categoriesSection.classList.remove('hidden');
+
       const categoryList = document.querySelector(
         '.selected-category-books-list'
       );
