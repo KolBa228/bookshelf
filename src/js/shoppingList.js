@@ -1,8 +1,6 @@
 import executeWithLoader from './service/executeWithLoader';
 import getBookById from './service/getBookById';
 
-
-
 const KEY_LIST = 'bookList';
 
 const listEl = document.querySelector('.books-shoppingList');
@@ -35,7 +33,11 @@ function markupBooks(data) {
               <h2 class="shoppingList-title">${book.title}</h2>
               <p class="shoppingList-category">${book.list_name}</p>
             </div>
-            <button class="shoppinglist-trash-btn" id=${book._id}>x
+            <button class="shoppingList-trash-btn" id=${book._id}>
+              <svg class="shoppingList-icon-trash">
+                <use href="./img/symbol-defs.svg#icon-trash"></use>
+              </svg>
+            </button>
             </button>
           </div>
           <p class="shoppingList-content">
@@ -104,36 +106,20 @@ const dataEl = localStorage.getItem(KEY_LIST);
 const parsedDataEl = JSON.parse(dataEl);
 
 const getBookInfo = async () => {
-
+  console.log(1);
   const bookDataArray = [];
   for (let i = 0; i < parsedDataEl.length; i++) {
     const data = await getBookById(parsedDataEl[i]);
-    // console.log(data);
+    console.log(data);
     bookDataArray.push(data);
   }
   markupBooks(bookDataArray);
-  
-  const deleteBtn = document.querySelector('.shoppinglist-trash-btn');
-  console.log(deleteBtn);
-  deleteBtn.addEventListener('click', (e) => {
-    const bookList = localStorage.getItem(KEY_LIST);
-    console.log(bookList);
-  const idForDelete = e.target.id
-    const filteredList = bookList.filter(id => idForDelete !== id)
-    // console.log(filteredList);
-  })
+  console.log(2);
 };
 
 executeWithLoader(() => {
-  // console.log('hello');
+  console.log('hello');
   getBookInfo();
 });
 
 displayMarkupBasedOnLocalStorage();
-
-// const deleteBtn = document.querySelector('.shoppinglist-trash-btn');
-// console.log(deleteBtn);
-
-// deleteBtn.addEventListener('click', onDeleteBtn(e))
-
-
