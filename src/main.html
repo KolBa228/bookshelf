@@ -18,7 +18,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/test.scss">
   <link rel="stylesheet" href="./css/style.css" />
-  
+
 </head>
 
 <body>
@@ -33,8 +33,15 @@
         <include src="./partials/categories_list.html"></include>
         <include src="./partials/sponsors.html"></include>
       </div>
-      <include src="./partials/best_sellers.html"></include>
-      <include src="./partials/category_section.html"></include>
+      <div style="position: relative;">
+        <div class="book-loader">
+          <img class="loader-image" src="./img/loader.svg" alt="Загрузка..." />
+        </div>
+        <include src="./partials/best_sellers.html"></include>
+        <!--  -->
+        <include src="./partials/category_section.html"></include>
+      </div>
+      <!--  -->
     </div>
   </main>
   <!-- modal -->
@@ -42,9 +49,8 @@
   <include src="./partials/authorization.html"></include>
   <!-- JS -->
   <script src="./js/mainPage.js" type="module"></script>
-  
+
   <script src="index.js" type="module"></script>
 </body>
 
 </html>
-
