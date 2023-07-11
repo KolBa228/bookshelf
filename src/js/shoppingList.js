@@ -106,6 +106,8 @@ const getBookInfo = async () => {
   });
 };
 
+
 executeWithLoader(async () => {
   await displayMarkupBasedOnLocalStorage();
 });
+
