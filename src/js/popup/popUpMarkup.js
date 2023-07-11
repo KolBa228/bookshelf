@@ -24,8 +24,10 @@ export async function onBookCardClick(ev) {
 
   const bookInfo = await getBookById(liEl.id);
 
+  // <img id=${bookInfo.id} src="${require('./img/default_cover.jpg')}"/>
+
   const popUpItemMarkup = `<div class='book-modal-container'>
-  <img src="${bookInfo.book_image}" alt="${bookInfo.title}" class="book-modal-img"/>
+  <img src="${bookInfo.book_image}" alt="${bookInfo.title}" class="book-modal-img default-image"/>
   
     <div class='book-modal-details'>
         <h2 class="book-modal-title">${bookInfo.title}</h2>

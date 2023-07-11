@@ -65,6 +65,14 @@
     width: 288px;
 }
 
+.default-image {
+    width: 288px;
+    height: 408px;
+    background-image: url(../img/default_cover.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .book-modal-title {
     margin-top: 14px;
     font-size: 16px;
@@ -109,8 +117,6 @@
 }
 
 .book-modal-btn {
-    /* display: inline-block;
-    text-align: center; */
     width: 212px;
     margin-top: 40px;
 
@@ -136,7 +142,6 @@
 
     .book-popup {
         max-width: 580px;
-        /* max-height: 464px; */
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -155,6 +160,13 @@
     .book-modal-img {
         width: 192px;
         margin-right: 24px;
+    }
+
+    .default-image {
+        width: 192px;
+        height: 280px;
+        margin-right: 24px;
+
     }
 
     .book-modal-title {
@@ -191,95 +203,3 @@
         letter-spacing: -0.18px;
     }
 }
-
-@media (min-width: 1440px) {}
-
-
-/* .book-modal-close {
-    display: none;
-} */
-/* 
-@media (min-width: 768px) {
-    .book-popup {
-        width: 580px;
-        padding: 40px 40px 40px;
-    }
-
-    .book-modal-container {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .book-modal-img {
-        width: 192px;
-        margin-right: 24px;
-        margin-bottom: 40px;
-    }
-
-
-    .book-modal-close {
-        position: absolute;
-        width: 28px;
-        height: 28px;
-        top: 24px;
-        right: 24px;
-
-    }
-
-    .icon-book-modal-close {
-    }
-} */
-
-/* .book-modal-btn {
-    color: var(--cat-btn-text);
-    border-radius: 40px;
-    border: 2px solid #4F2EE8;
-    background: var(--popup-bg);
-    width: 499px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: -0.18px;
-    text-transform: uppercase;
-}
-
-.icon-book-modal-list {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    align-items: center;
-}
-
-.book-modal-title {
-    margin-bottom: 8px;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: -0.96px;
-    text-transform: uppercase;
-    color: var(--book-title);
-}
-
-.book-modal-author {
-    margin-bottom: 20px;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: -0.56px;
-    color: var(--mute-autor);
-}
-
-.book-modal-desc {
-    margin-bottom: 20px;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: -0.56px;
-    color: var(--book-description);
-} */
