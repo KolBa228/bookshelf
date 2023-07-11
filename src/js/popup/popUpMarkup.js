@@ -58,7 +58,7 @@ export async function onBookCardClick(ev) {
     <button class='book-modal-close' id='js-book-modal-btn-close'>
     <svg class='icon-book-modal-close'><use href='${icon}#icon-close'></use></svg>
     </button>`;
-
+  
   popUp.innerHTML = popUpItemMarkup;
 
   const addToShopListButton = document.querySelector('.book-modal-btn');
