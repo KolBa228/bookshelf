@@ -25,6 +25,15 @@ export async function onBookCardClick(ev) {
   const liEl = ev.target.closest('.pop-up-item');
 
   const bookInfo = await getBookById(liEl.id);
+  let cartList = JSON.parse(localStorage.getItem('bookList'));
+  let btnContentData = '';
+
+  const bookId = bookInfo._id;
+  if (cartList && cartList.includes(bookId)) {
+    btnContentData = 'Remove from the shopping list';
+  } else {
+    btnContentData = 'Add to shopping list';
+  }
 
   const popUpItemMarkup = `<div class='book-modal-container'>
   <img src="${bookInfo.book_image}" alt="${bookInfo.title}" class="book-modal-img default-image"/>
@@ -53,12 +62,12 @@ export async function onBookCardClick(ev) {
     </div>
     </div>
 
-    <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn'>Add to shopping list</button>
+    <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn'>${btnContentData}</button>
 
     <button class='book-modal-close' id='js-book-modal-btn-close'>
     <svg class='icon-book-modal-close'><use href='${icon}#icon-close'></use></svg>
     </button>`;
-  
+
   popUp.innerHTML = popUpItemMarkup;
 
   const addToShopListButton = document.querySelector('.book-modal-btn');
@@ -75,20 +84,20 @@ export async function onBookCardClick(ev) {
   const addToCart = () => {
     let cartList = JSON.parse(localStorage.getItem('bookList'));
 
-    const removeButton = document.querySelector('.js-add');
+    const addRemoveBtn = document.querySelector('.js-add');
 
     if (!Array.isArray(cartList)) {
       cartList = [];
     }
     const bookId = bookInfo._id;
     if (cartList.includes(bookId)) {
-      removeButton.textContent = 'Add to shopping list';
       localStorage.removeItem('bookList', JSON.stringify(cartList));
+      addRemoveBtn.textContent = 'Add to shopping list';
       Notiflix.Notify.warning('Book has been removed successfully');
     } else {
       cartList.push(bookId);
       localStorage.setItem('bookList', JSON.stringify(cartList));
-      removeButton.textContent = 'Remove from the shopping list';
+      addRemoveBtn.textContent = 'Remove from the shopping list';
       Notiflix.Notify.success('Book has been added successfully');
     }
   };
