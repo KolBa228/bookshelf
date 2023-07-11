@@ -48,7 +48,7 @@
   align-items: center;
   width: 120px;
   height: 60px;
-  border: 1px solid var(--blue-color);
+  border: 1px solid var(--cat-btn-text);
   border-radius: 8px;
   opacity: 1;
   transition: color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07),
@@ -61,7 +61,7 @@
   align-items: center;
   width: 120px;
   height: 60px;
-  border: 1px solid var(--blue-color);
+  border: 1px solid var(--cat-btn-text);
   border-radius: 8px;
   opacity: 5;
   transition: color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07),
@@ -77,7 +77,7 @@
 .swiper-btn:focus .prev-icon,
 .swiper-btn:hover .prev-icon,
 .swiper-btn:focus .next-icon {
-  fill: var(--blue-color);
+  fill: var(--cat-list-focus-color);
   width: 50%;
   height: 50%;
   opacity: 1;
@@ -86,14 +86,14 @@
 }
 
 .next-icon {
-  fill: var(--blue-color);
+  fill: var(--popup-icons);
   width: 40px;
   height: 30px;
   opacity: 0.3;
 }
 
 .prev-icon {
-  fill: var(--blue-color);
+  fill: var(--popup-icons);
   width: 40px;
   height: 30px;
   opacity: 0.3;
