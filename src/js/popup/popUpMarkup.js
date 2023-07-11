@@ -33,17 +33,17 @@ export async function onBookCardClick(ev) {
         <p class='book-modal-desc'>${bookInfo.description}</p>
         <ul class='icon-book-modal-list'>
         <li>
-            <a href="" target="_blank">
+            <a href="${bookInfo.buy_links[0].url}" target="_blank">
             <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon">
             </a>
         </li>
         <li>
-            <a href="" target="_blank">
+            <a href="${bookInfo.buy_links[1].url}" target="_blank">
             <img src="https://i.ibb.co/nj6G7gJ/2-ibook.png" alt="ibook">
             </a>
         </li>
         <li>
-            <a href="" target="_blank">
+            <a href="${bookInfo.buy_links[2].url}" target="_blank">
             <img src="https://i.ibb.co/fFPnVJN/3-bookshop.png" alt="bookshop">
             </a>
         </li>
@@ -71,18 +71,24 @@ export async function onBookCardClick(ev) {
     popUp.classList.add('hidden');
     document.body.style.overflow = 'scroll';
   };
+
   const addToCart = () => {
     let cartList = JSON.parse(localStorage.getItem('bookList'));
+
+    const removeButton = document.querySelector('.js-add');
 
     if (!Array.isArray(cartList)) {
       cartList = [];
     }
     const bookId = bookInfo._id;
     if (cartList.includes(bookId)) {
-      Notiflix.Notify.warning('This book is already in the list');
+      removeButton.textContent = 'Add to shopping list';
+      localStorage.removeItem('bookList', JSON.stringify(cartList));
+      Notiflix.Notify.warning('Book has been removed successfully');
     } else {
       cartList.push(bookId);
       localStorage.setItem('bookList', JSON.stringify(cartList));
+      removeButton.textContent = 'Remove from the shopping list';
       Notiflix.Notify.success('Book has been added successfully');
     }
   };
