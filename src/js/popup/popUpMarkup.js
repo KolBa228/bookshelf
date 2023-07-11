@@ -3,6 +3,7 @@ import bookCard from '../../temlpates/bookCard.hbs';
 import { backDrop, bookCards, popUp, ulAll } from '../querrySelectors';
 import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
+
 import icon from '../../img/symbol-defs.svg';
 
 const categoryList = document.querySelector('.selected-category-books-list');
@@ -11,8 +12,9 @@ bookCards.forEach(item => {
   item.addEventListener('click', onBookCardClick);
 });
 
-categoryList.addEventListener('click', onBookCardClick);
-
+if (window.location.pathname === '/main') {
+  categoryList.addEventListener('click', onBookCardClick);
+}
 export async function onBookCardClick(ev) {
   ev.preventDefault();
 
