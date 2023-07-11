@@ -11,10 +11,12 @@
     transition: all 0.3s ease-in-out;
     background: rgba(17, 17, 17, 0.40);
     pointer-events: all;
+    overflow-y: auto;
 }
 
 .book-popup {
-    min-width: 335px;
+    max-width: 335px;
+    max-height: 764px;
     padding: 40px 24px;
     background: var(--popup-bg);
     border: 2px solid;
@@ -26,10 +28,10 @@
 
 .icon-book-modal-close {
     stroke: var(--start-icons-and-btn-color);
-    margin: -5%;
+    margin: -6%;
     padding: 0;
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
 }
 
 /* перевірити вар  */
@@ -40,22 +42,155 @@
 }
 
 .book-modal-container {
-    width: 335px;
+    max-width: 335px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.book-modal-img {
-    min-width: 288px;
-    margin-bottom: 14px;
+.book-modal-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 12px;
+    right: 12px;
+
 }
+
+.book-modal-img {
+    width: 288px;
+}
+
+.book-modal-title {
+    margin-top: 14px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.64px;
+}
+
+.book-modal-author {
+    margin-top: 4px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: -0.48px;
+}
+
+.book-modal-desc {
+    width: 288px;
+    margin-top: 18px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+}
+
+.icon-book-modal-list {
+    margin-top: 14px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+}
+
+.icon-item {
+    filter: grayscale(100%);
+}
+
+.book-modal-btn {
+    display: inline-block;
+    text-align: center;
+    width: 212px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 40px;
+    border: 2px solid #4F2EE8;
+
+    color: var(--cat-btn-text);
+    background: var(--popup-bg);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.14px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+    .book-popup {
+        max-width: 580px;
+        /* max-height: 464px; */
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .icon-book-modal-close {
+        margin: -15%;
+        width: 28px;
+        height: 28px;
+    }
+
+    .book-modal-container {
+        display: flex;
+        max-width: 580px;
+    }
+
+    .book-modal-img {
+        width: 192px;
+        margin-right: 24px;
+    }
+
+    .book-modal-title {
+        margin-top: 0;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: -0.96px;
+    }
+
+    .book-modal-author {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: -0.56px;
+    }
+
+    .book-modal-desc {
+        width: 280px;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .icon-book-modal-list {
+        margin-top: 20px;
+    }
+
+    .book-modal-btn {
+        margin-top: 40px;
+        width: 500px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.18px;
+    }
+}
+
+@media (min-width: 1440px) {}
 
 
 /* .book-modal-close {
     display: none;
 } */
-
-@media (min-width: 579px) {
+/* 
+@media (min-width: 768px) {
     .book-popup {
         width: 580px;
         padding: 40px 40px 40px;
@@ -72,6 +207,7 @@
         margin-bottom: 40px;
     }
 
+
     .book-modal-close {
         position: absolute;
         width: 28px;
@@ -82,12 +218,10 @@
     }
 
     .icon-book-modal-close {
-        /* width: 28px;
-        height: 28px; */
     }
-}
+} */
 
-.book-modal-btn {
+/* .book-modal-btn {
     color: var(--cat-btn-text);
     border-radius: 40px;
     border: 2px solid #4F2EE8;
@@ -139,4 +273,4 @@
     line-height: 18px;
     letter-spacing: -0.56px;
     color: var(--book-description);
-}
+} */

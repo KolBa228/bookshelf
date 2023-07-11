@@ -32,18 +32,18 @@ export async function onBookCardClick(ev) {
         <h3 class="book-modal-author">${bookInfo.author}</h3>
         <p class='book-modal-desc'>${bookInfo.description}</p>
         <ul class='icon-book-modal-list'>
-        <li>
+        <li class='icon-item'>
             <a href="${bookInfo.buy_links[0].url}" target="_blank">
             <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon">
             </a>
         </li>
-        <li>
+        <li class='icon-item'>
             <a href="${bookInfo.buy_links[1].url}" target="_blank">
             <img src="https://i.ibb.co/nj6G7gJ/2-ibook.png" alt="ibook">
             </a>
         </li>
-        <li>
-            <a href="${bookInfo.buy_links[2].url}" target="_blank">
+        <li class='icon-item'>
+            <a href="${bookInfo.buy_links[4].url}" target="_blank">
             <img src="https://i.ibb.co/fFPnVJN/3-bookshop.png" alt="bookshop">
             </a>
         </li>
