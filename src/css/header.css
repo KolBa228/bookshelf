@@ -77,7 +77,7 @@ ul {
 .header-uli-svg {
   width: 20px;
   height: 20px;
-  stroke: var(--header-nav-and-icons);
+  fill: var(--main-white-color);
 }
 
 .header-btn-box {
@@ -196,6 +196,9 @@ ul {
   .header-mobile-close {
     display: none;
   }
+  .header-uli-svg {
+    fill: var(--header-logo-color);
+  }
 }
 /* desktop */
 @media screen and (min-width: 1440px) {
@@ -255,7 +258,7 @@ ul {
 .modal-close-svg {
   width: 28px;
   height: 28px;
-  stroke: var(--main-black-color);
+  fill: var(--main-black-color);
 }
 
 /* mobile menu */
@@ -312,8 +315,8 @@ ul {
 
   gap: 10px;
   border-radius: 36px;
-  color: var(--header-nav-and-icons);
-  fill: var(--header-nav-and-icons);
+  color: var(--header-bg-color);
+  fill: var(--header-bg-color);
 }
 
 .menu-btn-item:first-child {
@@ -352,7 +355,9 @@ ul {
 }
 
 .active {
-  background-color: var(--yellow-color);
   font-weight: 700;
-  color: var(--main-black-color);
+  background-color: var(--yellow-color);
+  color: var(--header-logo-color);
+ 
+
 }
