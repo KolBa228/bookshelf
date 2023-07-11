@@ -10,7 +10,6 @@ const selectedCategoryMarkup = async request => {
   data.forEach(book => {
     checkData(book);
   });
-  // console.log(data);
   categoryWrapper.innerHTML = categoryBook(data);
   categoryTitle.textContent = request;
   const splitTitleFirst = categoryTitle.textContent

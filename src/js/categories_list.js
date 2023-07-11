@@ -32,7 +32,7 @@ const fillCategories = async () => {
 
   categoriesBtn.forEach(el => {
     el.addEventListener('click', async event => {
-      // console.log(event.target);
+
 
       categoriesBtn.forEach(element => {
         element.classList.remove('active-button');
@@ -52,7 +52,6 @@ const fillCategories = async () => {
       const categoryList = document.querySelector(
         '.selected-category-books-list'
       );
-      // console.log(categoryList);
       categoryList.addEventListener('click', evt => {
         onBookCardClick(evt);
       });

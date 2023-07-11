@@ -19,9 +19,7 @@ export async function onBookCardClick(ev) {
     return;
   }
 
-  // console.log(ev.target);
   const liEl = ev.target.closest('.pop-up-item');
-  // console.log(liEl);
 
   const bookInfo = await getBookById(liEl.id);
   checkData(bookInfo);

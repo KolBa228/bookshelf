@@ -108,6 +108,7 @@ const getBookInfo = async () => {
     bookDataArray.push(data);
   }
   markupBooks(bookDataArray);
+  
   const deleteBookButtons = document.querySelectorAll(
     '.shoppingList-trash-btn'
   );
