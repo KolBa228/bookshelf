@@ -63,13 +63,13 @@ const fillBestSellers = async () => {
       768: {
         spaceBetween: 25,
         slidesPerView: 3,
-        slidesPerGroup: 1,
+        slidesPerGroup: 3,
       },
 
       1440: {
         spaceBetween: 24,
         slidesPerView: 5,
-        slidesPerGroup: 1,
+        slidesPerGroup: 5,
       },
     },
     loop: true,
