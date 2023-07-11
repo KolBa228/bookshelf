@@ -1,6 +1,6 @@
 import fillBestSellers from './fillBestSellers';
 import executeWithLoader from './service/executeWithLoader';
-import selectedCategoryMarkup from './selectedcategorymarkup';
+import selectedCategoryMarkup from './categories/selectedcategorymarkup';
 import fillCategories from './categories_list';
 
 executeWithLoader(() => {

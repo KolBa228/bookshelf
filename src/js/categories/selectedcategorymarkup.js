@@ -1,13 +1,10 @@
-import getBooksByCategory from './service/getBooksByCategory';
-import bookCard from '../temlpates/bookCard.hbs';
-import categoryBook from '../temlpates/categoryBook.hbs';
-
-const request = 'Combined Print and E-Book Nonfiction';
+import getBooksByCategory from '../service/getBooksByCategory';
+import categoryBook from '../../temlpates/categoryBook.hbs';
 
 const categoryWrapper = document.querySelector('.selected-category-books-list');
 const categoryTitle = document.querySelector('.category-title');
 
-const selectedCategoryMarkup = async () => {
+const selectedCategoryMarkup = async request => {
   const data = await getBooksByCategory(request);
   categoryWrapper.innerHTML = categoryBook(data);
   categoryTitle.textContent = request;
