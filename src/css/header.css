@@ -256,8 +256,6 @@ ul {
   right: 20px;
 }
 .modal-close-svg {
-  width: 28px;
-  height: 28px;
   fill: var(--main-black-color);
 }
 
@@ -272,8 +270,9 @@ ul {
   background-color: var(--header-bg-color);
   border-style: none;
 }
+
 .header-mobile-svg {
-  stroke: var(--main-black-color);
+  stroke: var(--header-logo-color);
 }
 
 .header-mobile-menu {
@@ -358,6 +357,4 @@ ul {
   font-weight: 700;
   background-color: var(--yellow-color);
   color: var(--header-logo-color);
- 
-
 }
