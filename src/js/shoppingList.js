@@ -1,5 +1,6 @@
 import executeWithLoader from './service/executeWithLoader';
 import getBookById from './service/getBookById';
+import icon from './../img/symbol-defs.svg';
 
 const KEY_LIST = 'bookList';
 
@@ -26,7 +27,7 @@ function markupBooks(data) {
   const dataArray = Array.isArray(data) ? data : [data];
   let markupItem = '';
   for (const book of dataArray) {
-    markupItem += `<li class="shoppingList-item">
+    markupItem += `<li class="shoppingList-item ">
         <img class="shoppingList-img" src=${book.book_image} alt="" />
         <div class="shoppingList-container">
           <div id="content" class="box-shoppingList">
@@ -35,8 +36,7 @@ function markupBooks(data) {
               <p class="shoppingList-category">${book.list_name}</p>
             </div>
             <button class="shoppingList-trash-btn" id=${book._id}>
-              x
-            </button>
+            <svg class='shoppingList-icon-trash'><use href='${icon}#icon-trash'></use></svg>
             </button>
           </div>
           <p class="shoppingList-content">
@@ -67,7 +67,7 @@ function markupBooks(data) {
   listEl.innerHTML = markupItem;
 }
 
-const markupEmptyPage = `<li><p class="shoppingList-text">
+const markupEmptyPage = `<li class="shoppingList-empty-item"><p class="shoppingList-text">
 This page is empty, add some books and proceed to order.
 </p>
 <a href="./index.html">
@@ -90,7 +90,7 @@ const getBookInfo = async () => {
     bookDataArray.push(data);
   }
   markupBooks(bookDataArray);
-  
+
   const deleteBookButtons = document.querySelectorAll(
     '.shoppingList-trash-btn'
   );
