@@ -1,88 +1,113 @@
+import executeWithLoader from './service/executeWithLoader';
 import getBookById from './service/getBookById';
 
 const KEY_LIST = 'bookList';
 
 const listEl = document.querySelector('.books-shoppingList');
 
-console.dir(listEl);
+let imgEmptyLarge = new URL('../img/emptyLarge@2x.png', import.meta.url);
+let imgEmpty = new URL('../img/emptySmall.png', import.meta.url);
 
-const dataEl = localStorage.getItem(KEY_LIST);
-const parsedDataEl = JSON.parse(dataEl);
+async function displayMarkupBasedOnLocalStorage() {
+  const dataEl = localStorage.getItem(KEY_LIST);
+  const parsedDataEl = JSON.parse(dataEl);
 
-function markupBooks(parsedDataEl) {
-  listEl.innerHTML = '';
-  const markupItem = parsedDataEl
-    .map(parsedDataEl => {
-      return `
-      <li class="shoppingList-item">
-        <img class="shoppingList-img" src="./img/book-testImg.png" alt="" />
+  if (parsedDataEl && parsedDataEl.length > 0) {
+    // Display markup when there are items in local storage
+    await getBookInfo();
+  } else {
+    // Display alternative markup when local storage is empty
+    const emptyMarkup = markupEmptyPage;
+    listEl.innerHTML = emptyMarkup;
+  }
+}
+
+function markupBooks(data) {
+  const dataArray = Array.isArray(data) ? data : [data];
+  let markupItem = '';
+  for (const book of dataArray) {
+    markupItem += `<li class="shoppingList-item">
+        <img class="shoppingList-img" src=${book.book_image} alt="" />
         <div class="shoppingList-container">
           <div id="content" class="box-shoppingList">
             <div>
-              <h2 class="shoppingList-title">I will find you</h2>
-              <p class="shoppingList-category">Hardcover fiction</p>
+              <h2 class="shoppingList-title">${book.title}</h2>
+              <p class="shoppingList-category">${book.list_name}</p>
             </div>
-            <button class="shoppingList-trash-btn" id="$">
-              <svg class="shoppingList-icon-trash">
-                <use href="./img/symbol-defs.svg#icon-trash"></use>
-              </svg>
+            <button class="shoppingList-trash-btn" id=${book._id}>
+              x
+            </button>
             </button>
           </div>
           <p class="shoppingList-content">
-            David Burroughs was once a devoted father to his three-year-old son
-            Matthew, living a dream life just a short drive away from the
-            working-class suburb where he and his wife, Cheryl, first fell in
-            love--until one fateful night when David woke suddenly to discover
-            Matthew had been murdered while David was asleep just down the hall.
+          ${book.description}
           </p>
           <div class="shoppingList-link-container">
-            <p class="text-shoppingList-author">Harlan Coben</p>
-            <ul class="box-shoppingList-shop">
-              <li>
-                <a class="shop-shoppingList-link" href="https://www.amazon.com">
-                  <img
-                    class="shop-shoppingList-img1"
-                    src="./img/1-amazon.jpg"
-                    alt=""
-                  />
+            <p class="text-shoppingList-author">${book.author}</p>
+            <ul class='icon-book-modal-list shopping-list'>
+            <li>
+                <a href=${book.buy_links[0].url} target="_blank">
+                <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon" class="image-link1">
                 </a>
-              </li>
-              <li>
-                <a
-                  class="shop-shoppingList-link"
-                  href="https://goto.applebooks.apple"
-                >
-                  <img
-                    class="shop-shoppingList-img2"
-                    src="./img/2-ibook.jpg"
-                    alt=""
-                  />
+            </li>
+            <li>
+                <a href=${book.buy_links[1].url} target="_blank">
+                <img src="https://i.ibb.co/nj6G7gJ/2-ibook.png" alt="ibook" class="image-link2">
                 </a>
-              </li>
-              <li>
-                <a
-                  class="shop-shoppingList-link"
-                  href="https://du-gae-books-dot-nyt-du-prd.appspot.com"
-                >
-                  <img
-                    class="shop-shoppingList-img2"
-                    src="./img/3-bookshop.jpg"
-                    alt=""
-                  />
+            </li>
+            <li>
+                <a href=${book.buy_links[4].url} target="_blank">
+                <img src="https://i.ibb.co/fFPnVJN/3-bookshop.png" alt="bookshop" class="image-link2">
                 </a>
-              </li>`;
-    })
-    .join('');
-
+            </li>
+              </div>
+            </div>
+          </li>`;
+  }
   listEl.innerHTML = markupItem;
 }
 
-const id = '643282b2e85766588626a12a';
+const markupEmptyPage = `<li><p class="shoppingList-text">
+This page is empty, add some books and proceed to order.
+</p>
+<a href="./index.html">
+<picture>
+  <source srcset="${imgEmptyLarge} 2x" type="image/png" />
+  <img
+    class="shoppingList-img-empty"
+    src="${imgEmpty}"
+    alt="Book"
+  />
+</picture>
+</a></li>`;
 
 const getBookInfo = async () => {
-  const data = await getBookById(id);
-  console.log(data);
+  const dataEl = localStorage.getItem(KEY_LIST);
+  const parsedDataEl = JSON.parse(dataEl);
+  const bookDataArray = [];
+  for (let i = 0; i < parsedDataEl.length; i++) {
+    const data = await getBookById(parsedDataEl[i]);
+    bookDataArray.push(data);
+  }
+  markupBooks(bookDataArray);
+  
+  const deleteBookButtons = document.querySelectorAll(
+    '.shoppingList-trash-btn'
+  );
+
+  deleteBookButtons.forEach(el => {
+    el.addEventListener('click', e => {
+      const bookList = JSON.parse(localStorage.getItem(KEY_LIST));
+      const idForDelete = e.target.id;
+      const filteredList = bookList.filter(id => idForDelete !== id);
+      localStorage.setItem('bookList', JSON.stringify(filteredList));
+      displayMarkupBasedOnLocalStorage();
+    });
+  });
 };
 
-getBookInfo();
+
+executeWithLoader(async () => {
+  await displayMarkupBasedOnLocalStorage();
+});
 

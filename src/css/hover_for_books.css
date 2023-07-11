@@ -1,0 +1,37 @@
+.best-sellers-list-item {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+
+.best-sellers-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.book-title {
+  padding-left: 5px;
+}
+.book-author {
+  padding-left: 5px;
+}
+
+.book-modal-close {
+  padding: 0;
+}
+
+.category-list-item {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+
+.category-list-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.book-title {
+  padding-left: 5px;
+}
+.book-author {
+  padding-left: 5px;
+}

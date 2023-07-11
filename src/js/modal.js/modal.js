@@ -26,5 +26,4 @@ function onBtnCloseModal() {
   bodyEl.style.overflow = 'auto'
 }
 function onChangeActive(e) {
-  console.log(e);
 }

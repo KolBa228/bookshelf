@@ -39,12 +39,6 @@ const fillBestSellers = async () => {
   // hardcoverFiction.value.length = 4;
   // hardcoverNonFiction.value.length = 4;
 
-  // console.log(results);
-
-  // console.log(combinedFiction.value);
-  // console.log(combinedNonFiction.value);
-  // console.log(hardcoverFiction.value);
-  // console.log(hardcoverNonFiction.value);
 
   bookslist1.innerHTML = bookCard(combinedFiction.value);
   bookslist2.innerHTML = bookCard(combinedNonFiction.value);
@@ -63,13 +57,13 @@ const fillBestSellers = async () => {
       768: {
         spaceBetween: 25,
         slidesPerView: 3,
-        slidesPerGroup: 1,
+        slidesPerGroup: 3,
       },
 
       1440: {
         spaceBetween: 24,
         slidesPerView: 5,
-        slidesPerGroup: 1,
+        slidesPerGroup: 5,
       },
     },
     loop: true,

@@ -12,21 +12,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/test.scss">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/test.scss" />
 </head>
 
 <body>
   <include src="./partials/header.html"></include>
 
   <main>
-    <div class="shoppingList-main-content">
-      <div class="shoppingList-support">
-        <include src="./partials/sponsors.html"></include>
-      </div>
-      <include src="./partials/shopping_section.html"></include>
+    <include src="./partials/sponsors.html"></include>
+    <include src="./partials/shopping_section.html"></include>
     </div>
   </main>
+  <div class="loader">
+    <img class="loader-image" src="./img/loader.svg" alt="Загрузка..." />
+  </div>
+  <script src="./js/shoppingList.js" type="module"></script>
   <script src="./index.js" type="module"></script>
 </body>
 

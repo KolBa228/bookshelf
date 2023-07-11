@@ -5,6 +5,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
   <title>Document</title>
   <!-- NORMALAISE -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css" />
@@ -15,6 +18,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/test.scss">
   <link rel="stylesheet" href="./css/style.css" />
+  
 </head>
 
 <body>
@@ -22,6 +26,7 @@
     <img class="loader-image" src="./img/loader.svg" alt="Загрузка..." />
   </div>
   <include src="./partials/header.html"></include>
+  <include src="./partials/autoriz-1.html"></include>
   <main>
     <div class="categories-wrapper container">
       <div class="side-bar">
@@ -34,8 +39,10 @@
   </main>
   <!-- modal -->
   <include src="./partials/pop_up.html"></include>
+  <include src="./partials/authorization.html"></include>
   <!-- JS -->
   <script src="./js/mainPage.js" type="module"></script>
+  
   <script src="index.js" type="module"></script>
 </body>
 

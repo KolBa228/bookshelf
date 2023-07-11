@@ -87,3 +87,9 @@ color: var(--cat-list-focus-color);
 font-weight: 700;
 text-transform: uppercase;
 }
+
+.active-button {
+  color: var(--cat-list-focus-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
