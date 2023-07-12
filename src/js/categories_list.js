@@ -56,12 +56,7 @@ const fillCategories = async () => {
       bookLoader.classList.add('hidden');
       categoriesSection.classList.remove('hidden');
 
-      const categoryList = document.querySelector(
-        '.selected-category-books-list'
-      );
-      categoryList.addEventListener('click', evt => {
-        onBookCardClick(evt);
-      });
+
     });
   });
 };

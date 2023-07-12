@@ -1,9 +1,14 @@
 import getBooksByCategory from '../service/getBooksByCategory';
 import categoryBook from '../../temlpates/categoryBook.hbs';
 import checkData from './check_data';
+import { onBookCardClick } from '../popup/popUpMarkup';
 
 const categoryWrapper = document.querySelector('.selected-category-books-list');
 const categoryTitle = document.querySelector('.category-title');
+const categoryList = document.querySelector('.selected-category-books-list');
+categoryList.addEventListener('click', evt => {
+  onBookCardClick(evt);
+});
 
 const selectedCategoryMarkup = async request => {
   const data = await getBooksByCategory(request);
