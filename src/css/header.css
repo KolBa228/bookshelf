@@ -17,7 +17,7 @@ ul {
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
-  z-index: 999;
+  z-index: 9;
 }
 /* logo side */
 .header-list {
@@ -204,7 +204,7 @@ ul {
 @media screen and (min-width: 1440px) {
   .header-container {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     padding-left: 24px;
     padding-right: 24px;
   }
