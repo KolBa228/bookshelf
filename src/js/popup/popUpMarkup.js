@@ -3,9 +3,9 @@ import bookCard from '../../temlpates/bookCard.hbs';
 import { backDrop, bookCards, popUp, ulAll } from '../querrySelectors';
 import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
+import checkData from '../categories/check_data';
 
 import icon from '../../img/symbol-defs.svg';
-import checkData from '../categories/check_data';
 
 const categoryList = document.querySelector('.selected-category-books-list');
 
@@ -26,8 +26,11 @@ export async function onBookCardClick(ev) {
   const liEl = ev.target.closest('.pop-up-item');
 
   const bookInfo = await getBookById(liEl.id);
+
   checkData(bookInfo);
+
   let cartList = JSON.parse(localStorage.getItem('bookList'));
+
   let btnContentData = '';
 
   const bookId = bookInfo._id;
@@ -45,28 +48,28 @@ export async function onBookCardClick(ev) {
         <h3 class="book-modal-author">${bookInfo.author}</h3>
         <p class='book-modal-desc'>${bookInfo.description}</p>
         <ul class='icon-book-modal-list'>
-        <li class='icon-item'>
+        <li>
             <a href="${bookInfo.buy_links[0].url}" target="_blank">
-            <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon" class="amazon-icon">
+            <img src="https://i.ibb.co/vvPnCJ6/1-amazon.png" alt="amazon" class="image-link1">
             </a>
         </li>
-        <li class='icon-item'>
+        <li>
             <a href="${bookInfo.buy_links[1].url}" target="_blank">
-            <img src="https://i.ibb.co/nj6G7gJ/2-ibook.png" alt="ibook">
+            <img src="https://i.ibb.co/nj6G7gJ/2-ibook.png" alt="ibook" class="image-link2">
             </a>
         </li>
-        <li class='icon-item'>
+        <li>
             <a href="${bookInfo.buy_links[4].url}" target="_blank">
-            <img src="https://i.ibb.co/fFPnVJN/3-bookshop.png" alt="bookshop">
+            <img src="https://i.ibb.co/fFPnVJN/3-bookshop.png" alt="bookshop" class="image-link2">
             </a>
         </li>
         </ul>
     </div>
     </div>
 
-    <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn' alt='add-to-shopping-list-button'>${btnContentData}</button>
+    <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn'>${btnContentData}</button>
 
-    <button class='book-modal-close' id='js-book-modal-btn-close' alt='close-modal-window'>
+    <button class='book-modal-close' id='js-book-modal-btn-close'>
     <svg class='icon-book-modal-close'><use href='${icon}#icon-close'></use></svg>
     </button>`;
 

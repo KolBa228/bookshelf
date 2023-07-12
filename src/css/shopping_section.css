@@ -17,12 +17,14 @@
   line-height: 1.18;
   color: var(--book-title);
 }
+
 @media (min-width: 768px) {
   .shopping-section-title {
     font-size: 48px;
     line-height: 0.9;
   }
 }
+
 @media (max-width: 1439px) {
   .shopping-section-title {
     margin-top: 40px;
@@ -51,6 +53,7 @@
 
 .shoppingList-item:not(:last-child) {
   margin-bottom: 20px;
+  transition: box-shadow 250ms var(--cubic);
 }
 
 .shoppingList-item:hover {
@@ -228,10 +231,12 @@
   align-items: center;
   justify-content: center;
 }
+
 .shop-shoppingList-img1 {
   width: 32px;
   height: 11px;
 }
+
 .shop-shoppingList-img2 {
   width: 16px;
   height: 16px;
@@ -301,6 +306,7 @@
   /* filter: grayscale(100%); */
   /* filter: var(--popup-icons); */
   filter: var(--amazon-icon);
+  transition: filter 250ms var(--cubic);
 }
 
 .image-link1:hover,
@@ -308,13 +314,16 @@
 .image-link2:hover,
 .image-link2:focus {
   -webkit-filter: drop-shadow(5px 5px 5px #00000026);
-  filter: drop-shadow(5px 5px 5px #00000026);
+  filter: contrast(120%) drop-shadow(5px 5px 5px #00000026);
+
+
 }
 
 .image-link2 {
   width: 16px;
   height: 16px;
   filter: grayscale(100%);
+  transition: filter 250ms var(--cubic);
 }
 
 @media (min-width: 768px) {
@@ -322,6 +331,7 @@
     width: 48px;
     height: 15px;
   }
+
   .image-link2 {
     width: 32px;
     height: 30px;
@@ -364,6 +374,7 @@
   .main-content-container {
     display: flex;
   }
+
   .shop-cart-support-box {
     display: block;
   }
