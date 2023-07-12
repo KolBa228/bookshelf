@@ -77,6 +77,8 @@
   letter-spacing: -0.32px;
   color: var(--cat-list-text-color);
   transition: color 350ms var(--cubic);
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 @media screen and (min-width: 768px) {
