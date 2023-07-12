@@ -1,99 +1,96 @@
-.container-categories{
-    pointer-events: all;
-    position: relative;
-    height: 228px;
-    width: 335px;
-    display: block;
-    box-sizing: border-box;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-left: 20px;
-
+.container-categories {
+  pointer-events: all;
+  position: relative;
+  height: 228px;
+  width: 335px;
+  display: block;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 768px) {
   .container-categories {
-      width: 337px;
-      height: 472px;
+    width: 337px;
+    height: 472px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .container-categories {
-      width: 356px;
+    width: 356px;
   }
 }
 
-  .container-categories::-webkit-scrollbar {
-    width: 8px;
-  }
-  .container-categories::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  .container-categories::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-  }
-  .container-categories::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
-
-
-.container-categories-list{
-   padding-right: 20px;
+.container-categories::-webkit-scrollbar {
+  width: 8px;
+}
+.container-categories::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.container-categories::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+.container-categories::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }
 
-.categories-list{
-    width: 307px;
-    height: 228px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+.container-categories-list {
+  padding-right: 20px;
 }
 
-@media screen and (min-width: 768px) {
-    .categories-list {
-        gap: 32px;
-        width: 309px;
-        height: 472px;
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    .container-categories {
-        width: 328px;
-    }
-  }
-
-.categories-list-item{
-
-
-}
-
-.categories-button{
-    display: flex;
-    background-color: transparent;
-    border: none;
-    font-weight: 400;
-    font-size: 14px;
-    line-height:1.125;
-    letter-spacing: -0.32px;
-    color: var(--cat-list-text-color);
+.categories-list {
+  width: 307px;
+  height: 228px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 }
 
 @media screen and (min-width: 768px) {
-    .categories-button {
-        line-height: 1.333;
-        letter-spacing: -0.36px;
-    }
+  .categories-list {
+    gap: 32px;
+    width: 309px;
+    height: 472px;
   }
+}
 
-.categories-button:hover, 
-.categories-button:focus{
-color: var(--cat-list-focus-color);
-font-weight: 700;
-text-transform: uppercase;
+@media screen and (min-width: 1440px) {
+  .container-categories {
+    width: 328px;
+  }
+}
+
+.categories-list-item {
+}
+
+.categories-button {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.125;
+  letter-spacing: -0.32px;
+  color: var(--cat-list-text-color);
+  transition: color 350ms var(--cubic);
+}
+
+@media screen and (min-width: 768px) {
+  .categories-button {
+    line-height: 1.333;
+    letter-spacing: -0.36px;
+  }
+}
+
+.categories-button:hover,
+.categories-button:focus {
+  color: var(--cat-list-focus-color);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .active-button {
