@@ -3,6 +3,7 @@ import bookCard from '../../temlpates/bookCard.hbs';
 import { backDrop, bookCards, popUp, ulAll } from '../querrySelectors';
 import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
+import checkData from '../categories/check_data';
 
 import icon from '../../img/symbol-defs.svg';
 
@@ -25,7 +26,11 @@ export async function onBookCardClick(ev) {
   const liEl = ev.target.closest('.pop-up-item');
 
   const bookInfo = await getBookById(liEl.id);
+
+  checkData(bookInfo);
+
   let cartList = JSON.parse(localStorage.getItem('bookList'));
+
   let btnContentData = '';
 
   const bookId = bookInfo._id;
