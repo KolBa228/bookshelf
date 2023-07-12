@@ -53,7 +53,7 @@
 
 // new Change
 
-let opnBtnModel = document.getElementById('opnBtnMod');
+let opnBtnModel = document.getElementById('btnOpenModal');
 import { showCommentsSection, hideCommentsSection } from './app';
 import { loadComments } from './comments';
 import { sendBtnOut } from './app';
@@ -61,6 +61,7 @@ export function signUp() {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   let name = document.getElementById('name').value;
+  // const opnBtnModel = document.getElementById('btnOpenModal');
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
@@ -70,6 +71,7 @@ export function signUp() {
       const user = userCredential.user;
       sendBtnOut.classList.remove('is-display');
       document.getElementById('header-auth').classList.remove('is-hidden');
+      opnBtnModel.textContent = `${name}`;
       // Оновлення профілю користувача з ім'ям
       user
         .updateProfile({
@@ -85,12 +87,14 @@ export function signUp() {
     })
     .catch(function (error) {
       console.log(error);
+      opnBtnModel.textContent = 'sing up';
     });
 }
 
 export function signIn() {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
+  let name = document.getElementById('name').value;
   // sendBtnOut.classList.remove('is-display')
   firebase
     .auth()
@@ -100,10 +104,12 @@ export function signIn() {
       loadComments();
       sendBtnOut.classList.remove('is-display');
       document.getElementById('header-auth').classList.remove('is-hidden');
+      opnBtnModel.textContent = `${name}`;
     })
     .catch(function (error) {
       console.log(error);
       sendBtnOut.classList.add('is-display');
+      opnBtnModel.textContent = 'sing up';
     });
 }
 
@@ -115,6 +121,7 @@ export function signOut() {
       hideCommentsSection();
       sendBtnOut.classList.add('is-display');
       document.getElementById('header-auth').classList.add('is-hidden');
+      opnBtnModel.textContent = 'sing up';
     })
     .catch(function (error) {
       console.log(error);
