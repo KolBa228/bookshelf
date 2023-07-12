@@ -10,10 +10,10 @@ const fillCategories = async () => {
   const categories = await getCategoryList();
   const buttonHTML = [
     `<li class="categories-list-item">       
-    <button class="categories-button all-categories-btn active-button" type="button">       All categories       </button></li>`,
+    <button class="categories-button all-categories-btn active-button" type="button" alt='best-sellers-button'>       All categories       </button></li>`,
   ];
   const tempHTML = categories.map(category => {
-    return `<li class="categories-list-item"><button class="categories-button categories-rest-btns" type="button">${category.list_name}</button></li>`;
+    return `<li class="categories-list-item"><button class="categories-button categories-rest-btns" type="button" alt='category-button'>${category.list_name}</button></li>`;
   });
   categoriesList.innerHTML = buttonHTML.join(' ') + tempHTML.join(' ');
   const allCategoriesBtn = document.querySelector('.all-categories-btn');
@@ -55,8 +55,6 @@ const fillCategories = async () => {
 
       bookLoader.classList.add('hidden');
       categoriesSection.classList.remove('hidden');
-
-
     });
   });
 };

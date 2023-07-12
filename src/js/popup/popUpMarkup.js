@@ -64,9 +64,9 @@ export async function onBookCardClick(ev) {
     </div>
     </div>
 
-    <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn'>${btnContentData}</button>
+    <button type="button" class='book-modal-btn js-add' id='js-book-modal-btn' alt='add-to-shopping-list-button'>${btnContentData}</button>
 
-    <button class='book-modal-close' id='js-book-modal-btn-close'>
+    <button class='book-modal-close' id='js-book-modal-btn-close' alt='close-modal-window'>
     <svg class='icon-book-modal-close'><use href='${icon}#icon-close'></use></svg>
     </button>`;
 

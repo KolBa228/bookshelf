@@ -65,7 +65,8 @@
   border-radius: 8px;
   opacity: 5;
   transition: color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07),
-    background-color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07);
+    background-color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07),
+    fill 250ms var(--cubic);
 }
 
 .swiper-button-next:after,
