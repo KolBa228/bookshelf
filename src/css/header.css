@@ -31,19 +31,18 @@ ul {
   justify-content: center;
 }
 
-.header-item {
-  line-height: 14px;
-  font-weight: 600;
-  color: var(--header-logo-color);
-}
-
 .header-logo-item {
   margin-right: 8px;
+  color: var(--header-logo-color);
 }
-
+.header-link {
+  line-height: 14px;
+  font-weight: 600;
+}
 .header-svg-logo {
   width: 24px;
   height: 24px;
+  stroke: var(--main-backgraund-color);
 }
 
 /* navigation side */
@@ -59,17 +58,11 @@ ul {
 .header-nav-item {
   display: flex;
 
-  padding: 8px 16px;
   align-items: flex-start;
   gap: 10px;
   border-radius: 36px;
   color: var(--header-nav-and-icons);
   fill: var(--header-nav-and-icons);
-}
-.active {
-  background-color: var(--yellow-color);
-  font-weight: 700;
-  color: var(--main-black-color);
 }
 
 .header-nav-link {
@@ -78,11 +71,13 @@ ul {
   display: flex;
   align-items: center;
   gap: 4px;
+  padding: 8px 16px;
 }
+
 .header-uli-svg {
   width: 20px;
   height: 20px;
-  stroke: var(--header-nav-and-icons);
+  fill: var(--main-white-color);
 }
 
 .header-btn-box {
@@ -159,16 +154,16 @@ ul {
 }
 
 /* .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 } */
 
 /* support class */
@@ -200,6 +195,9 @@ ul {
   }
   .header-mobile-close {
     display: none;
+  }
+  .header-uli-svg {
+    fill: var(--header-logo-color);
   }
 }
 /* desktop */
@@ -258,9 +256,7 @@ ul {
   right: 20px;
 }
 .modal-close-svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--main-black-color);
+  fill: var(--main-black-color);
 }
 
 /* mobile menu */
@@ -274,8 +270,9 @@ ul {
   background-color: var(--header-bg-color);
   border-style: none;
 }
+
 .header-mobile-svg {
-  stroke: var(--main-black-color);
+  stroke: var(--header-logo-color);
 }
 
 .header-mobile-menu {
@@ -317,13 +314,12 @@ ul {
 
   gap: 10px;
   border-radius: 36px;
-}
-.menu-btn-item:first-child {
-  margin-left: 13px;
+  color: var(--header-bg-color);
+  fill: var(--header-bg-color);
 }
 
-.active {
-  background-color: var(--yellow-color);
+.menu-btn-item:first-child {
+  margin-left: 13px;
 }
 
 .menu-btn-link {
@@ -355,4 +351,10 @@ ul {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.active {
+  font-weight: 700;
+  background-color: var(--yellow-color);
+  color: var(--header-logo-color);
 }
