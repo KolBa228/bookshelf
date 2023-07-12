@@ -100,11 +100,11 @@
 }
 
 .button-box {
-  display: none;
+  display: flex;
 }
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .button-box {
     display: flex;
   }
-}
+} */
