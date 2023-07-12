@@ -1,4 +1,4 @@
-<div class="modal-backdrop is-hidden" data-modal>
+<!-- <div class="modal-backdrop is-hidden" data-modal>
   <div class="modal">
     <button class="close-sign" data-modal-close>
       <svg class="vector" width="28" height="28">
@@ -47,4 +47,73 @@
       </div>
     </form>
   </div>
+</div> -->
+
+
+// new Change
+
+<div class="modal-backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="close-sign" data-modal-close>
+      <svg class="vector" width="28" height="28">
+        <use href="/src/img/symbol-defs.svg#icon-vector"></use>
+      </svg>
+    </button>
+    <form id="auth-container" onsubmit="signup(event)" name="formAuthorization" class="form-authorization">
+      <input
+        name=""
+        type="text"
+        id="name"
+        class="modal-input margin js-name"
+        placeholder="NAME"
+        required
+      />
+
+      <input
+        name=""
+        type="email"
+        id="email"
+        class="modal-input margin js-email"
+        placeholder="EMAIL"
+        required
+      />
+
+      <input
+        name=""
+        type="password"
+        id="password"
+        class="modal-input margin js-password"
+        placeholder="PASSWORD"
+        required
+      />
+
+      <button type="submit" id="signup-btn" value="signup-btn"  class="button-modal modal-input js-sendUp">
+        SIGN UP
+      </button>
+      <button
+        type="submit"
+        id="signin-btn"
+        class="button-modal modal-input is-display js-sendIn"
+      >
+        SIGN IN
+      </button>
+      <div class="modal-footer">
+        <button class="modal-footer-link sign-up hover-color js-up">
+          SIGN UP
+        </button>
+        <button class="modal-footer-link sign-in js-in">SIGN IN</button>
+          </div>
+    </form>
+    <button id="signout-btn" class="modal-footer-link sign-in js-out">SIGN OUT</button>
+  </div>
+</div>
+
+<div id="comments-container" style="display: none;">
+  <h2 id="user-name"></h2>
+  <input type="text" id="comment-input" placeholder="Напишіть коментар">
+  <button id="add-comment-btn">Додати коментар</button>
+  <button id="signout-btn">Вийти</button>
+  <div id="comments"></div>
+</div>
+
 </div>

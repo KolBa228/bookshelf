@@ -116,3 +116,15 @@
   background-color: black;
   color: #ffffff;
 }
+
+.js-up{
+  margin-left: auto;
+}
+
+.js-in{
+  margin-right: auto;
+}
+.modal-footer-link.sign-in.js-out{
+  margin-left: auto;
+  margin-right: auto;
+}
