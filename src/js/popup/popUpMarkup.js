@@ -5,6 +5,7 @@ import getBookById from '../service/getBookById';
 import getBooksByCategory from '../service/getBooksByCategory';
 
 import icon from '../../img/symbol-defs.svg';
+import checkData from '../categories/check_data';
 
 const categoryList = document.querySelector('.selected-category-books-list');
 
@@ -25,6 +26,7 @@ export async function onBookCardClick(ev) {
   const liEl = ev.target.closest('.pop-up-item');
 
   const bookInfo = await getBookById(liEl.id);
+  checkData(bookInfo);
   let cartList = JSON.parse(localStorage.getItem('bookList'));
   let btnContentData = '';
 
