@@ -117,14 +117,14 @@
   color: #ffffff;
 }
 
-.js-up{
+.modal-footer-link.sign-up.hover-color.js-up.center-margin-up{
   margin-left: auto;
 }
 
-.js-in{
+.js-in.center-margin-in{
   margin-right: auto;
 }
-.modal-footer-link.sign-in.js-out{
+/* .modal-footer-link.sign-in.js-out{
   margin-left: auto;
   margin-right: auto;
-}
+} */

@@ -14,8 +14,8 @@ fetchTheme();
 suppMarkup();
 import './js/turn_nav_colros'
 
-// import './js/modal.js/authorization';
-// import './js/autorization/app';
-// import './js/autorization/auth';
-// import './js/autorization/comments';
+import './js/modal.js/authorization';
+import './js/autorization/app';
+import './js/autorization/auth';
+import './js/autorization/comments';
 
