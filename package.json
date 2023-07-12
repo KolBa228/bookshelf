@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@parcel/core": "^2.9.3",
+    "@parcel/optimizer-swc": "^2.9.3",
     "@parcel/watcher": "^2.2.0",
     "basiclightbox": "^5.0.4",
     "firebase": "^10.0.0",
