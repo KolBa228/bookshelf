@@ -46,7 +46,7 @@
 // function modalAuthorization(){
 
 // }
-
+ 
 (() => {
   const refs = {
     openModalBtn: document.querySelector('.header-open-modal-btn'),
