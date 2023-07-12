@@ -298,8 +298,9 @@
 .image-link1 {
   width: 32px;
   height: 11px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   /* filter: var(--popup-icons); */
+  filter: var(--amazon-icon);
 }
 
 .image-link1:hover,
