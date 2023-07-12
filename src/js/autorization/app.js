@@ -81,13 +81,14 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 // const app = initializeApp(firebaseConfig);
-
+export let sendBtnOut = document.getElementById('signout-btn');
+sendBtnOut.classList.add('is-display')
 sendBtnUp.addEventListener('click', signUp);
 sendBtnIn.addEventListener('click', signIn);
-document.getElementById('signout-btn').addEventListener('click', signOut);
+sendBtnOut.addEventListener('click', signOut);
 document
-  .getElementById('add-comment-btn')
-  .addEventListener('click', addComment);
+.getElementById('add-comment-btn')
+ .addEventListener('click', addComment);
   
 
 export function showCommentsSection() {
