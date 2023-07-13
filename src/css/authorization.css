@@ -122,6 +122,7 @@ bottom: 6px;
   border-width: 2px;
   border-color: var(--start-form-borders-color);
   background-color: var(--start-form-bg-color);
+  color: var(--start-icons-and-btn-color);
 }
 
 @media (max-width: 768px){
