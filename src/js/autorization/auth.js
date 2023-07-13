@@ -114,6 +114,12 @@ export function signOut() {
       const jsBtnTxt = document.querySelector('.btn-txt');
       jsBtnTxt.textContent = 'sign Up';
       // hideCommentsSection();
+       if (
+      window.location.pathname === '/cringe-team-top-project/shoping_list.html'
+       ) {
+         window.location.pathname =
+           '/cringe-team-top-project/main.html';
+    }
     })
     .catch(function (error) {
       console.log(error);
