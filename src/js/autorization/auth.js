@@ -15,6 +15,7 @@ export function signUp() {
       .then(function(userCredential) {
         // Отримання зареєстрованого користувача
         const user = userCredential.user;
+        
   
         // Оновлення профілю користувача з ім'ям
         user.updateProfile({
