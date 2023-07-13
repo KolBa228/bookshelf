@@ -20,8 +20,21 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
 document.getElementById('signup-btn').addEventListener('click', signUp);
-document.getElementById('signin-btn').addEventListener('submit', signIn);
+document.getElementById('sign-in-Btn').addEventListener('click', signIn);
 document.getElementById('signout-btn').addEventListener('click', signOut);
+document.getElementById('signin-btn').addEventListener('click', changeSign);
+document.getElementById('signup-change-btn').addEventListener('click', changeSignUp);
+function changeSignUp(){
+  document.getElementById('signup-btn').classList.remove('is-display');
+  document.querySelector('.js-sendIn').classList.add('is-display');
+  document.getElementById('signin-btn').classList.remove('is-display');
+}
+
+function changeSign(){
+  document.getElementById('signup-btn').classList.add('is-display');
+  document.querySelector('.js-sendIn').classList.remove('is-display');
+}
+
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
@@ -32,16 +45,17 @@ firebase.auth().onAuthStateChanged(function (user) {
   // getDataFromFirebase()
     // Відображення імені користувача
     const userNameContainer = document.querySelector('.user-name-id');
-    userNameContainer.textContent = `Вітаємо,  ${userName} !`;
+    // userNameContainer.textContent = `Вітаємо,  ${userName} !`;
     // showCommentsSection();
     formAutorizHiden.style.display = 'none'
     sendBtnOut.classList.remove('is-display')
     const jsBtnTxt = document.querySelector('.btn-txt')
-              jsBtnTxt.textContent = 'sign Out'
+              jsBtnTxt.textContent = ` ${userName} `
               const newElement = document.createElement('p');
               newElement.setAttribute('class', 'my-element');
-              newElement.textContent = `Вітаємо,  ${userName} !`;
-              document.body.appendChild(newElement);     
+              // newElement.textContent = `Вітаємо,  ${userName} !`;
+              document.body.appendChild(newElement); 
+              document.querySelector('.header-nav').classList.remove('is-display')    
               
     // const commentsContainer = document.getElementById('comments-container');
     
@@ -52,6 +66,8 @@ firebase.auth().onAuthStateChanged(function (user) {
     const jsBtnTxt = document.querySelector('.btn-txt')
               jsBtnTxt.textContent = 'sign Up'
              document.querySelector('.my-element').style.display = 'none'
+             document.querySelector('.header-nav').style.display = 'none'
+
 
     // hideCommentsSection();
   }
