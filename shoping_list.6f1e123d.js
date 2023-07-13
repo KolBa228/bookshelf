@@ -1,7 +1,7 @@
-!function(){var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},i={},t={},s=e.parcelRequire3427;null==s&&((s=function(e){if(e in i)return i[e].exports;if(e in t){var s=t[e];delete t[e];var a={id:e,exports:{}};return i[e]=a,s.call(a.exports,a,a.exports),a.exports}var l=Error("Cannot find module '"+e+"'");throw l.code="MODULE_NOT_FOUND",l}).register=function(e,i){t[e]=i},e.parcelRequire3427=s),s("iE7OH").register(JSON.parse('{"jMc91":"shoping_list.43a8d823.js","4BzQQ":"symbol-defs.1b980632.svg","1idPu":"emptySmall.08a2b864.png","6hZEU":"emptyLarge@2x.c88e1f7f.png","6s6ai":"main.578a73d3.js"}'));var a=s("2XllU"),l=s("gzmIx"),o={};o=s("aNJCr").getBundleURL("jMc91")+s("iE7OH").resolve("4BzQQ");let n="bookList",r=document.querySelector(".books-shoppingList");var p={};p=s("aNJCr").getBundleURL("jMc91")+s("iE7OH").resolve("6hZEU");let c=new URL(p);var g={};g=s("aNJCr").getBundleURL("jMc91")+s("iE7OH").resolve("1idPu");let d=new URL(g);async function h(){let e=localStorage.getItem(n),i=JSON.parse(e);i&&i.length>0?await b():r.innerHTML=u}let u=`<li class="shoppingList-empty-item"><p class="shoppingList-text">
+!function(){var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},i={},t={},s=e.parcelRequire3427;null==s&&((s=function(e){if(e in i)return i[e].exports;if(e in t){var s=t[e];delete t[e];var a={id:e,exports:{}};return i[e]=a,s.call(a.exports,a,a.exports),a.exports}var l=Error("Cannot find module '"+e+"'");throw l.code="MODULE_NOT_FOUND",l}).register=function(e,i){t[e]=i},e.parcelRequire3427=s),s("iE7OH").register(JSON.parse('{"jMc91":"shoping_list.6f1e123d.js","4BzQQ":"symbol-defs.1b980632.svg","1idPu":"emptySmall.08a2b864.png","6hZEU":"emptyLarge@2x.c88e1f7f.png","6s6ai":"main.578a73d3.js"}'));var a=s("2XllU"),l=s("gzmIx"),o={};o=s("aNJCr").getBundleURL("jMc91")+s("iE7OH").resolve("4BzQQ");let n="bookList",r=document.querySelector(".books-shoppingList");var p={};p=s("aNJCr").getBundleURL("jMc91")+s("iE7OH").resolve("6hZEU");let c=new URL(p);var g={};g=s("aNJCr").getBundleURL("jMc91")+s("iE7OH").resolve("1idPu");let d=new URL(g);async function h(){let e=localStorage.getItem(n),i=JSON.parse(e);i&&i.length>0?await b():r.innerHTML=u}let u=`<li class="shoppingList-empty-item"><p class="shoppingList-text">
 This page is empty, add some books and proceed to order.
 </p>
-<a href="./index.html">
+<a href="/src/main.html">
 <picture>
   <source srcset="${c} 2x" type="image/png" />
   <img
@@ -46,4 +46,4 @@ This page is empty, add some books and proceed to order.
               </div>
             </div>
           </li>`}r.innerHTML=t}(t);let s=document.querySelectorAll(".shoppingList-trash-btn");s.forEach(e=>{e.addEventListener("click",e=>{let i=JSON.parse(localStorage.getItem(n)),t=e.target.id,s=i.filter(e=>t!==e);localStorage.setItem("bookList",JSON.stringify(s)),h()})})};(0,a.default)(async()=>{await h()})}();
-//# sourceMappingURL=shoping_list.43a8d823.js.map
+//# sourceMappingURL=shoping_list.6f1e123d.js.map
