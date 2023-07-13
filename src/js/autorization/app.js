@@ -23,6 +23,7 @@ document.getElementById('signup-btn').addEventListener('click', signUp);
 document.getElementById('signin-btn').addEventListener('submit', signIn);
 document.getElementById('signout-btn').addEventListener('click', signOut);
 
+
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     const userName = firebase.auth().currentUser.displayName; // Отримання імені користувача
@@ -32,15 +33,15 @@ firebase.auth().onAuthStateChanged(function (user) {
   // getDataFromFirebase()
     // Відображення імені користувача
     const userNameContainer = document.querySelector('.user-name-id');
-    userNameContainer.textContent = `Вітаємо,  ${userName} !`;
+    // userNameContainer.textContent = `Вітаємо,  ${userName} !`;
     // showCommentsSection();
     formAutorizHiden.style.display = 'none'
     sendBtnOut.classList.remove('is-display')
     const jsBtnTxt = document.querySelector('.btn-txt')
-              jsBtnTxt.textContent = 'sign Out'
+              jsBtnTxt.textContent = ` ${userName} `
               const newElement = document.createElement('p');
               newElement.setAttribute('class', 'my-element');
-              newElement.textContent = `Вітаємо,  ${userName} !`;
+              // newElement.textContent = `Вітаємо,  ${userName} !`;
               document.body.appendChild(newElement);     
               
     // const commentsContainer = document.getElementById('comments-container');
@@ -52,6 +53,8 @@ firebase.auth().onAuthStateChanged(function (user) {
     const jsBtnTxt = document.querySelector('.btn-txt')
               jsBtnTxt.textContent = 'sign Up'
              document.querySelector('.my-element').style.display = 'none'
+             document.querySelector('.header-nav').style.display = 'none'
+
 
     // hideCommentsSection();
   }
