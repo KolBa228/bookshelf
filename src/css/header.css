@@ -276,7 +276,7 @@ ul {
 }
 
 .header-mobile-menu {
-  z-index: 10;
+  z-index: 1;
   display: flex;
   position: fixed;
   min-width: 100%;
