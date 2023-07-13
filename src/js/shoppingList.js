@@ -35,7 +35,7 @@ function markupBooks(data) {
               <h2 class="shoppingList-title">${book.title}</h2>
               <p class="shoppingList-category">${book.list_name}</p>
             </div>
-            <button class="shoppingList-trash-btn" id=${book._id} alt='delete-book'>
+            <button class="shoppingList-trash-btn" id=${book._id} aria-label='delete-book'>
             <svg class='shoppingList-icon-trash'><use href='${icon}#icon-trash'></use></svg>
             </button>
           </div>
