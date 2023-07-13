@@ -59,7 +59,9 @@
         <use href="/src/img/symbol-defs.svg#icon-vector"></use>
       </svg>
     </button>
-    <form id="auth-container" onsubmit="signup(event)" name="formAuthorization" class="form-authorization">
+    <h2 class="user-name-id"></h2>
+    <form id="auth-container"  name="formAuthorization" class="form-authorization">
+      
       <input
         name=""
         type="text"
@@ -87,33 +89,40 @@
         required
       />
 
-      <button type="submit" id="signup-btn" value="signup-btn"  class="button-modal modal-input js-sendUp">
+      <button type="button" id="signup-btn" value="signup-btn"  class="button-modal modal-input js-sendUp">
         SIGN UP
       </button>
       <button
         type="submit"
-        id="signin-btn"
+      
         class="button-modal modal-input is-display js-sendIn"
       >
         SIGN IN
       </button>
       <div class="modal-footer">
-        <button class="modal-footer-link sign-up hover-color js-up center-margin-up">
+        <button  type="button" id="signup-btn" class="modal-footer-link sign-up hover-color js-up center-margin-up">
           SIGN UP
         </button>
-        <button class="modal-footer-link sign-in js-in center-margin-in">SIGN IN</button>
+        <button   id="signin-btn" class="modal-footer-link sign-in js-in center-margin-in">SIGN IN</button>
           </div>
     </form>
-    <button id="signout-btn" class="modal-footer-link sign-in js-out">SIGN OUT</button>
+    <button tupe="button" id="signout-btn" class="modal-footer-link   is-display js-sign-out">SIGN OUT</button>
   </div>
 </div>
 
-<div id="comments-container" style="display: none;">
+
+
+
+
+
+
+
+<!-- <div id="comments-container" style="display: none;">
   <h2 id="user-name"></h2>
   <input type="text" id="comment-input" placeholder="Напишіть коментар">
   <button id="add-comment-btn">Додати коментар</button>
   <button id="signout-btn">Вийти</button>
   <div id="comments"></div>
-</div>
+</div> -->
 
 </div>
