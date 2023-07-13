@@ -63,7 +63,7 @@ export function signUp() {
   }
   
 
-  document.getElementById('signin-btn').addEventListener('click', signIn);
+  // document.getElementById('signin-btn').addEventListener('click', signIn);
 
 
 
