@@ -1,4 +1,3 @@
-
 import { signUp, signIn, signOut } from './auth.js';
 import { addComment, deleteComment, loadComments } from './comments.js';
 import { formAutorizHiden, sendBtnOut } from './auth.js';
@@ -23,62 +22,63 @@ document.getElementById('signup-btn').addEventListener('click', signUp);
 document.getElementById('sign-in-Btn').addEventListener('click', signIn);
 document.getElementById('signout-btn').addEventListener('click', signOut);
 document.getElementById('signin-btn').addEventListener('click', changeSign);
-document.getElementById('signup-change-btn').addEventListener('click', changeSignUp);
-function changeSignUp(){
+document
+  .getElementById('signup-change-btn')
+  .addEventListener('click', changeSignUp);
+function changeSignUp() {
   document.getElementById('signup-btn').classList.remove('is-display');
   document.querySelector('.js-sendIn').classList.add('is-display');
   document.getElementById('signin-btn').classList.remove('is-display');
 }
 
-function changeSign(){
+function changeSign() {
   document.getElementById('signup-btn').classList.add('is-display');
   document.querySelector('.js-sendIn').classList.remove('is-display');
 }
 
-
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     const userName = firebase.auth().currentUser.displayName; // Отримання імені користувача
-  //   localStorage.clear();
-  //   saveDataToLocalstorage()
-  // addDataToFirebase()
-  // getDataFromFirebase()
+    //   localStorage.clear();
+    //   saveDataToLocalstorage()
+    // addDataToFirebase()
+    // getDataFromFirebase()
     // Відображення імені користувача
     const userNameContainer = document.querySelector('.user-name-id');
     // userNameContainer.textContent = `Вітаємо,  ${userName} !`;
     // showCommentsSection();
-    formAutorizHiden.style.display = 'none'
-    sendBtnOut.classList.remove('is-display')
-    const jsBtnTxt = document.querySelector('.btn-txt')
-              jsBtnTxt.textContent = ` ${userName} `
-              const newElement = document.createElement('p');
-              newElement.setAttribute('class', 'my-element');
-              // newElement.textContent = `Вітаємо,  ${userName} !`;
-              document.body.appendChild(newElement); 
-              document.querySelector('.header-nav').classList.remove('is-display')    
-              
+    formAutorizHiden.style.display = 'none';
+    sendBtnOut.classList.remove('is-display');
+    const jsBtnTxt = document.querySelectorAll('.btn-txt');
+    jsBtnTxt[0].textContent = ` ${userName} `;
+    jsBtnTxt[1].textContent = ` ${userName} `;
+    const newElement = document.createElement('p');
+    newElement.setAttribute('class', 'my-element');
+    // newElement.textContent = `Вітаємо,  ${userName} !`;
+    document.body.appendChild(newElement);
+    document.querySelector('.header-nav').classList.remove('is-display');
+
     // const commentsContainer = document.getElementById('comments-container');
-    
+
     // loadComments();
   } else {
-    formAutorizHiden.style.display = 'block'
-    sendBtnOut.classList.add('is-display')
-    const jsBtnTxt = document.querySelector('.btn-txt')
-              jsBtnTxt.textContent = 'sign Up'
-             document.querySelector('.my-element').style.display = 'none'
-             document.querySelector('.header-nav').style.display = 'none'
-
+    formAutorizHiden.style.display = 'block';
+    sendBtnOut.classList.add('is-display');
+    const jsBtnTxt = document.querySelectorAll('.btn-txt');
+    jsBtnTxt[0].textContent = 'sign Up';
+    jsBtnTxt[1].textContent = 'sign Up';
+    document.querySelector('.my-element').style.display = 'none';
+    document.querySelector('.header-nav').style.display = 'none';
 
     // hideCommentsSection();
   }
 });
 
-
-
-
 export function saveDataToLocalstorage() {
-  database.ref('bookInfo').once('value')
-    .then((snapshot) => {
+  database
+    .ref('bookInfo')
+    .once('value')
+    .then(snapshot => {
       const data = snapshot.val();
       const dataArray = Object.values(data);
 
@@ -87,12 +87,13 @@ export function saveDataToLocalstorage() {
 
       console.log('Дані успішно збережено у локальному сховищі');
     })
-    .catch((error) => {
-      console.log('Помилка при отриманні даних з Firebase Realtime Database:', error);
+    .catch(error => {
+      console.log(
+        'Помилка при отриманні даних з Firebase Realtime Database:',
+        error
+      );
     });
 }
-
-
 
 // export function getDataFromFirebase() {
 //   // Отримання даних з Firebase Realtime Database
@@ -116,46 +117,35 @@ export function saveDataToLocalstorage() {
 //     });
 // }
 
-
-
-
 export function addDataToFirebase() {
   const dataEl = localStorage.getItem('bookList');
   const parsedDataEl = JSON.parse(dataEl);
 
   if (parsedDataEl && parsedDataEl.length > 0) {
     // Збереження даних в Firebase Realtime Database
-    database.ref('bookInfo').push(parsedDataEl)
+    database
+      .ref('bookInfo')
+      .push(parsedDataEl)
       .then(() => {
         console.log('Дані успішно додано до Firebase Realtime Database');
       })
-      .catch((error) => {
-        console.log('Помилка при додаванні даних до Firebase Realtime Database:', error);
+      .catch(error => {
+        console.log(
+          'Помилка при додаванні даних до Firebase Realtime Database:',
+          error
+        );
       });
   } else {
     console.log('Немає даних для додавання');
   }
 }
 
-
-
-
-
-
-
-
 // --------------------------------------------------------------------------------------------------
-
-
-
-
-
 
 // new Change
 
 // import {sendBtnUp} from '/src/js/modal.js/authorization'
 // import {sendBtnIn} from '/src/js/modal.js/authorization'
-
 
 // import { signUp, signIn, signOut } from './auth';
 // import { addComment, deleteComment, loadComments } from './comments.js';
@@ -174,8 +164,6 @@ export function addDataToFirebase() {
 //   measurementId: 'G-PF0Y9DKB6P',
 //  };
 
-
-
 // firebase.initializeApp(firebaseConfig);
 
 // // const app = initializeApp(firebaseConfig);
@@ -187,7 +175,6 @@ export function addDataToFirebase() {
 // document
 // .getElementById('add-comment-btn')
 //  .addEventListener('click', addComment);
-  
 
 // export function showCommentsSection() {
 //   const authContainer = document.getElementById('auth-container');
@@ -219,7 +206,6 @@ export function addDataToFirebase() {
 //     hideCommentsSection();
 //   }
 // });
-
 
 // -------------------------------------------------------------------------------------------------------------
 // <div id="authForm">

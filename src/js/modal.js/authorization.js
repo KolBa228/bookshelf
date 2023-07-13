@@ -46,15 +46,16 @@
 // function modalAuthorization(){
 
 // }
- 
+
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('.header-open-modal-btn'),
+    openModalBtn: document.querySelectorAll('.header-open-modal-btn'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
+  refs.openModalBtn[0].addEventListener('click', toggleModal);
+  refs.openModalBtn[1].addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
@@ -82,8 +83,6 @@ function changeModalIn() {
   sendBtnIn.classList.remove('is-display');
 }
 
-
-
 // import { initializeApp } from 'firebase/app';
 //         import {
 //             getAuth,
@@ -93,8 +92,7 @@ function changeModalIn() {
 //             signOut
 //         //Update the below URL with the appropriate version if necessary.
 //         } from 'firebase/auth';
-       
-      
+
 //         // INSERT YOUR FIREBASE CONFIG OBJECT HERE
 //         const firebaseConfig = {
 //           apiKey: "AIzaSyCFBwN4f9PmRfsv-nwy-H-N5NRWZgQ_2wA",
@@ -107,8 +105,7 @@ function changeModalIn() {
 //           databaseURL:
 //             'https://auth-boock-project-default-rtdb.europe-west1.firebasedatabase.app/',
 //          };
-      
-    
+
 //         const app = initializeApp(firebaseConfig);
 //         const auth = getAuth(app);
 
@@ -118,7 +115,7 @@ function changeModalIn() {
 //         const secretContent = document.querySelector("#secretContent");
 //         const signUpButton = document.querySelector("#signup-btn");
 //         const signInButton = document.querySelector("#signin-btn");
-//         
+//
 
 //         // secretContent.style.display = 'none';
 
@@ -161,7 +158,7 @@ function changeModalIn() {
 //                 }
 //                 else {
 //                     authForm.style.display = 'block';
-                   
+
 //                 }
 //             })
 //         }
@@ -176,76 +173,58 @@ function changeModalIn() {
 //         signInButton.addEventListener('click', userSignIn);
 //         // signOutButton.addEventListener('click', userSignOut);
 
-
-        
 // // Your web app's Firebase configuration
 //   var firebaseConfig = {
 //     //firebase config stuff
 //       };
 //       // Initialize Firebase
 //       firebase.initializeApp(firebaseConfig);
-      
+
 //       const auth = firebase.auth();
-      
-      
+
 //       function signUp(){
-        
+
 //         var email = document.getElementById("email");
 //         var password = document.getElementById("password");
-        
+
 //         const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
 //         promise.catch(e => alert(e.message));
-        
+
 //         alert("Signed Up");
 //       }
-      
-      
-      
+
 //       function signIn(){
-        
+
 //         var email = document.getElementById("email");
 //         var password = document.getElementById("password");
-        
+
 //         const promise = auth.signInWithEmailAndPassword(email.value, password.value);
 //         promise.catch(e => alert(e.message));
-        
-        
-        
-        
+
 //       }
-      
-      
+
 //       function signOut(){
-        
+
 //         auth.signOut();
 //         alert("Signed Out");
-        
+
 //       }
-      
-      
-      
+
 //       auth.onAuthStateChanged(function(user){
-        
+
 //         if(user){
-          
+
 //           var email = user.email;
 //           alert("Active User " + email);
-          
+
 //           //Take user to a different or home page
-    
+
 //           //is signed in
-          
+
 //         }else{
-          
+
 //           alert("No Active User");
 //           //no user is signed in
 //         }
-        
-        
-        
-//       });
-      
-    
-    
-  
 
+//       });
