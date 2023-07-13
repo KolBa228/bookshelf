@@ -107,6 +107,10 @@ bottom: 6px;
   fill: var(--start-icons-and-btn-color);
 
 }
+.vector:hover, .vector:focus {
+  fill: var(--blue-color);
+  transition: fill ease 250ms;
+}
 @media (max-width: 768px) {
   .vector{
     width: 16px;
@@ -137,6 +141,38 @@ bottom: 6px;
   color: var(--start-icons-and-btn-color);
   font-weight: 700;
 }
+
+   .start-icons {
+  position: absolute;
+  fill: var(  --start-btn-text-color);
+  stroke: var(  --start-icons-and-btn-color);
+  right: 25px;
+  width: 18px;
+  height: 18px;
+}
+.start-icons:hover, .start-icons:focus {
+  stroke: var(--blue-color);
+  transition: stroke ease 250ms;
+}
+.mail {
+  top: 94px;
+}
+.lock {
+  top: 170px;
+}
+@media (min-width: 768px) {
+.start-icons {
+  right: 32px;
+    width: 28px;
+  height: 28px;
+}
+.mail {
+    top: 110px;
+}
+.lock {
+  top: 200px;
+}
+  }
 
 .margin {
   margin-bottom: 28px;
