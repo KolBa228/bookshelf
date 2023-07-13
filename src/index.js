@@ -1,5 +1,4 @@
 import './js/modal.js/modal';
-import './js/turn_nav_colros';
 import getCategoryList from './js/service/getCategoryList';
 import { suppMarkup } from './js/create_supp_items';
 import { suppCases } from './js/create_supp_items';
@@ -17,3 +16,4 @@ import './js/modal.js/authorization';
 import './js/autorization/app';
 import './js/autorization/auth';
 import './js/autorization/comments';
+import './js/turn_nav_colros';

@@ -28,6 +28,8 @@
   line-height: 1.28;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+
+  user-select: none;
 }
 
 .book-cover-img {
