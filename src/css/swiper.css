@@ -83,7 +83,8 @@
   height: 50%;
   opacity: 1;
   transition: color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07),
-    background-color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07);
+    background-color 0.25s cubic-bezier(0.53, 0.36, 0.67, 1.07),
+    fill 0.25s var(--cubic);
 }
 
 .next-icon {

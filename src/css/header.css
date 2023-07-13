@@ -126,6 +126,13 @@ ul {
   align-items: center;
   padding-left: 14px;
   padding-right: 14px;
+  transition: transform 250ms var(--cubic), box-shadow 250ms var(--cubic);
+}
+
+.header-open-modal-btn:hover,
+.header-open-modal-btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 0 5px #0000004d;
 }
 
 .second {
@@ -377,4 +384,3 @@ ul {
 .active-icon {
   fill: var(--header-logo-color);
 }
-
