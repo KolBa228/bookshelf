@@ -70,7 +70,7 @@ function markupBooks(data) {
 const markupEmptyPage = `<li class="shoppingList-empty-item"><p class="shoppingList-text">
 This page is empty, add some books and proceed to order.
 </p>
-<a href="./index.html">
+<a href="/src/main.html">
 <picture>
   <source srcset="${imgEmptyLarge} 2x" type="image/png" />
   <img
