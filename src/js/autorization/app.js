@@ -52,10 +52,10 @@ firebase.auth().onAuthStateChanged(function (user) {
     const jsBtnTxt = document.querySelectorAll('.btn-txt');
     jsBtnTxt[0].textContent = ` ${userName} `;
     jsBtnTxt[1].textContent = ` ${userName} `;
-    const newElement = document.createElement('p');
-    newElement.setAttribute('class', 'my-element');
+    // const newElement = document.createElement('p');
+    // newElement.setAttribute('class', 'my-element');
     // newElement.textContent = `Вітаємо,  ${userName} !`;
-    document.body.appendChild(newElement);
+    // document.body.appendChild(newElement);
     const headerNavigation = document.querySelectorAll('.header-nav');
     headerNavigation[0].classList.remove('is-display');
     headerNavigation[1].classList.remove('is-display');
@@ -69,7 +69,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     const jsBtnTxt = document.querySelectorAll('.btn-txt');
     jsBtnTxt[0].textContent = 'sign Up';
     jsBtnTxt[1].textContent = 'sign Up';
-    document.querySelector('.my-element').style.display = 'none';
+    // document.querySelector('.my-element').style.display = 'none';
     const headerNavigation = document.querySelectorAll('.header-nav');
     headerNavigation[0].classList.add('is-display');
     headerNavigation[1].classList.add('is-display');
