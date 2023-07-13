@@ -314,7 +314,9 @@ ul {
 
 .menu-btn-container {
   display: flex;
+  flex-direction: column;
   margin: 184px auto;
+  gap: 30px;
 }
 .menu-btn-list {
   display: flex;

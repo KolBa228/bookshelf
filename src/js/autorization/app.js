@@ -56,7 +56,9 @@ firebase.auth().onAuthStateChanged(function (user) {
     newElement.setAttribute('class', 'my-element');
     // newElement.textContent = `Вітаємо,  ${userName} !`;
     document.body.appendChild(newElement);
-    document.querySelector('.header-nav').classList.remove('is-display');
+    const headerNavigation = document.querySelectorAll('.header-nav');
+    headerNavigation[0].classList.remove('is-display');
+    headerNavigation[1].classList.remove('is-display');
 
     // const commentsContainer = document.getElementById('comments-container');
 
@@ -68,7 +70,9 @@ firebase.auth().onAuthStateChanged(function (user) {
     jsBtnTxt[0].textContent = 'sign Up';
     jsBtnTxt[1].textContent = 'sign Up';
     document.querySelector('.my-element').style.display = 'none';
-    document.querySelector('.header-nav').style.display = 'none';
+    const headerNavigation = document.querySelectorAll('.header-nav');
+    headerNavigation[0].classList.add('is-display');
+    headerNavigation[1].classList.add('is-display');
 
     // hideCommentsSection();
   }
