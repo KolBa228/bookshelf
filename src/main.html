@@ -1,90 +1,64 @@
 <!DOCTYPE html>
 
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Online book magazine" />
-    <meta name="keywords" content="books" />
-    <meta name="author" content="Cringe Team" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BookShelf</title>
-    <!-- NORMALAISE -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css"
-    />
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FavIcon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="./favicon/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="./favicon/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/test.scss" />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
 
-  <body>
-    <div class="loader">
-      <img class="loader-image" src="./img/loader.svg" alt="Загрузка..." />
-    </div>
-    <include src="./partials/header.html"></include>
-    <include src="./partials/autoriz-1.html"></include>
-    <main>
-      <div class="categories-wrapper container">
-        <div class="side-bar">
-          <include src="./partials/categories_list.html"></include>
-          <include src="./partials/sponsors.html"></include>
-        </div>
-        <div class="books-container">
-          <img
-            class="books-loader-image hidden"
-            src="./img/loader.svg"
-            alt="Загрузка..."
-          />
-          <include src="./partials/best_sellers.html"></include>
-          <!--  -->
-          <include src="./partials/category_section.html"></include>
-        </div>
-        <!--  -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Online book magazine" />
+  <meta name="keywords" content="books" />
+  <meta name="author" content="Cringe Team" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookShelf</title>
+  <!-- NORMALAISE -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.css" />
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- FavIcon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png" />
+  <link rel="manifest" href="./favicon/site.webmanifest" />
+  <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/test.scss" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="loader">
+    <img class="loader-image" src="./img/loader.svg" alt="Загрузка..." />
+  </div>
+  <include src="./partials/header.html"></include>
+  <include src="./partials/autoriz-1.html"></include>
+  <main>
+    <div class="categories-wrapper container">
+      <div class="side-bar">
+        <include src="./partials/categories_list.html"></include>
+        <include src="./partials/sponsors.html"></include>
       </div>
-    </main>
-    <!-- modal -->
-    <include src="./partials/pop_up.html"></include>
-    <include src="./partials/authorization.html"></include>
-    <!-- JS -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-    <script src="./js/mainPage.js" type="module"></script>
+      <div class="books-container">
+        <img class="books-loader-image hidden" src="./img/loader.svg" alt="Загрузка..." />
+        <include src="./partials/best_sellers.html"></include>
+        <!--  -->
+        <include src="./partials/category_section.html"></include>
+      </div>
+      <!--  -->
+    </div>
+  </main>
+  <!-- modal -->
+  <include src="./partials/pop_up.html"></include>
+  <include src="./partials/authorization.html"></include>
+  <!-- JS -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="./js/mainPage.js" type="module"></script>
 
-    <script src="index.js" type="module"></script>
-  </body>
+  <script src="index.js" type="module"></script>
+</body>
+
 </html>
